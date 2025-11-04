@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+input="main"
+
+if [ $# -gt 0 ]; then
+    input=$1
+fi
+
+
+texfile=$input".tex"
+dvifile=$input".dvi"
+outfile=$input".pdf"
+
+echo $input $dvifile $outfile
+echo "Compile $texfile"
+
+log=$(platex -interaction=nonstopmode $texfile  > /dev/null 2>&1)
+
+status=$?
+if [ $status -ne 0 ]; then
+    echo "エラーが起こりました"
+    platex $texfile  
+    exit 0;
+fi
+
+platex $texfile > /dev/null 2>&1
+
+dvipdfmx $dvifile
+
+# sudo cp $outfile /mnt/c/Users/井上謙太郎/Dron/pdf/
+
+# password="ag_rs@_kentaro_p@ss"
+
+# expect -c "
+# set timeout 10
+# spawn rsync -arv --progress $outfile ag:/www/J-PARC/inoue/Dron/
+# expect \"passphrase\"
+# send   \"$password\n\"
+# expect \"$\"
+# exit 0
+# "

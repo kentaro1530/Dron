@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rm *.aux *.dvi *.log *.out *.toc *.pdf

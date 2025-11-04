@@ -1,0 +1,33 @@
+\begin{frame}{$d(K^-, n)"\pi^-\Sigma^+"$と$d(K^-, n)" \pi^+\Sigma^-"$の平均}
+  \label{page:ave_CS_old}
+  
+  \centering  
+  \scriptsize
+  %% 前のページの$d(K^-, n)"\pi^{\mp}\Sigma^{\pm}"$の平均。\\
+  %% エラーはフィッティングエラーは各荷電モードの自乗平均で計算。\\
+  %% 統計エラーとスケールファクターエラーは計算後に共通につける。\\
+
+  \begin{figure}
+    \includegraphics[width=6cm]{../pic/Run78//KN_ana_NC170_2sigma//Charge_ave_CS_v0.eps}
+  \end{figure}
+
+  \begin{itemize}
+  \item 内側Boxのエラー
+    $ Err_{stat}=\frac{d\sigma_{ave}}{dM d\Omega}\times\frac{1}{\sqrt{N}} $ N : $d(K^-, n)"\pi^{\mp}\Sigma^{\pm}"$の各ビンのイベント数
+  \item 外側Boxのエラー
+    $
+    Err_{stat+Fit}=\frac{d^2\sigma_{ave}}{dM d\Omega}\sqrt{ \frac{1}{N}+\left(\frac{Err_{\pi^+\Sigma^-}}{\frac{d^2\sigma}{dMd\Omega}_{\pi^+\Sigma^-}}\right)^2
+      +\left(\frac{Err_{\pi^-\Sigma^+}}{\frac{d^2\sigma}{dMd\Omega}_{\pi^-\Sigma^+}}\right)^2 }
+    $
+  \item エラーバー
+    $
+    Err_{stat+Fit+conv}=\frac{d^2\sigma_{ave}}{dM d\Omega}\sqrt{ \frac{1}{N}+\left(\frac{Err_{\pi^+\Sigma^-}}{\frac{d^2\sigma}{dMd\Omega}_{\pi^+\Sigma^-}}\right)^2
+      +\left(\frac{Err_{\pi^-\Sigma^+}}{\frac{d^2\sigma}{dMd\Omega}_{\pi^-\Sigma^+}}\right)^2+Err_{conv}^2 } 
+    $    
+  \end{itemize}
+    
+  
+  %% 内側のBoxは統計エラーを外側のBoxはフィッティングエラーを含むエラーを、\\
+  %% エラーバーはスケールファクター[左表]を含むエラーを表す。\\
+  %% 各エラーは自乗平均で計算。\\
+\end{frame}

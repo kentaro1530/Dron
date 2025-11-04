@@ -1,0 +1,152 @@
+\section{J-PARC}
+Japan Proton Accelerator Research Complex (J-PARC), located at Tokai, Japan, is the only facility that provides a kaon beam today. The concept of J-PARC is to utilize secondary particles produced by primary proton beam of 1 MW class (design goal), which is the world highest intensity. J-PARC consists of three proton accelerators, an H$^-$ linac as an injector, 3 GeV Rapid Cycling Synchrotron (RCS), and 50 GeV Main Ring (MR). RCS acts as a booster for MR, and also delivers 3 GeV proton beam to the Material and Life science Facility, which aims at promoting material science and life science using pulsed neutron and muon beams. MR, now operating at 30 GeV, provides a fast extracted (FX) beam to produce neutrino beam to Kamioka and a slow extracted (SX) beam to the hadron experimental facility, where experiments of particle and nuclear physics are performed by using primary proton and secondary pion, kaon and anti-proton beams.
+
+\subsection{SX beam and time structure}
+In the SX operation, the beam in the MR is ``slowly" extracted by gradually shaving bunched beam while the remaining beam is kept circulating in the MR. The spill length was approximately two seconds with a six-second repetition cycle. 
+
+The intensity of the SX beam in the present experiment was about 24 kW. It was about 10\% of the designed intensity. The difficulties to reduce the beam loss in the extraction process is one of the main reasons why the SX intensity is limited while the FX beam have already achieved more than 200 kW. 
+
+Another problem is related to the time structure of the beam. %Hadron experiments with secondary beams require only 1 beam particle comes in the interested time range, often order 10 ns. That's why we use SX beam to suppress the instantaneous beam intensity while keeping integrated beam number. 
+In an ideal case, the beam should be completely DC during the extraction period. However, we are suffering from a spike-like time structure on the extracted beam, which result from current ripples of the magnet power supplies in the MR.
+To describe the spill time structure, we define the spill duty factor as
+\begin{eqnarray}
+Duty &= \left( \int_{0}^{T}I(t)dt\right)^2 / \int_{0}^{T}dt\int_{0}^{T}I(t)^2dt 
+\end{eqnarray}
+where $I(t)$ is the beam spill intensity, and $T$ is the spill length. The spill duty factor was $\sim$ 45\% in the experimental period with an application of 47.5 MHz transverse rf system. %\cite{transverse}
+Microscopic time structures corresponding to the rf frequency was observed as is shown in the next chapter.   
+
+A typical operation condition of the SX beam in May, 2013 is summarized in Table~\ref{table-sxbeam}.
+
+\begin{table}[]
+\caption{Typical operational condition of the SX beam as of May, 2013.}
+\begin{center}
+\begin{tabular}{ll}
+\hline\hline
+Primary beam momentum & 30 GeV/c \\
+Primary beam power & 24 kW\\
+~~Protons per spill & 3.0 $\times 10^{13}$ \\
+~~Repetition cycle & 6 sec\\
+%Flat Top & 2.93 sec\\
+Spill Length & 2.1 sec\\
+Spill duty factor & 45\% \\
+Spill extraction efficiency & 99.5\% \\
+Frequency of transverse RF & 47.5 MHz \\
+\hline\hline
+\end{tabular}
+\end{center}
+\label{table-sxbeam}
+\end{table}%
+
+
+\section{K1.8BR beam-line in the hadron experimental facility}
+The primary proton beam is transported to a production target (T1) in the hadron experimental facility. In the present experiment, 6 mm (width) $\times$ 6 mm (height) $\times$ 66 mm (length) gold was used as the T1 target. The hadronic beams produced at the T1 target are extracted to several beam lines.
+
+The present experiment is performed at the K1.8BR beam line located at the north side of the hadron experimental hall. The K1.8BR beam line is branched from the K1.8 beam line and has shorter beam line length of 31.3 m from the T1 target to the final focus point(FF), which is suitable to deliver low-momentum beam upto 1.2 GeV/$c$. The configuration of the K1.8BR beam line is shown in Fig.~\ref{k18br}, and its parameters are summarized in Table~\ref{k18brtable}.
+
+The beam-line is composed of three sections: a front-end section (D1-D2), a mass separation section (IF-MS1), and a beam analyzer section (D3-FF). The front-end section is required for extraction of secondary particles from the T1 target. The extraction angle is chosen to be 6 degree, where the kaon production cross section is expected to be at a maximum according to the Sanford-Wang formula\cite{yamamoto1981}.
+
+A good mass separation is realized with two vertical slits, an electrostatic separator (ES1), and a pair of correction magnets. The secondary beam is focused vertically at the entrance of mass separation section, where an IF-V slit is placed to reduce so-called cloud pion and to redefine the beam size. Then the 6 m-long ES1 vertically separates the particle trajectory by their mass with an applied field of 50 kV/cm\cite{Ieiri20084205}. Finally, a vertical slit (MS1) pass through the selected mass beam with a help of two vertical steering magnets, CM1 and CM2. We also have two horizontal slits, an IF-H at the internal focus point and a MOM just downstream of the MS1, where the optics is designed to be dispersive. 
+
+After the D3 magnet, an SQDQD system is employed to focus the beam on the experimental target at FF of the K1.8BR beam line. The most downstream magnet D5 is required to change the beam direction to keep a flight-length of scattered neutron as long as 15 m. The D5 magnet is also used as a beam momentum analyzer. 
+
+The first-order beam envelope calculated by the TRANSPORT code\cite{Anonymous:M8WJFLy5} is shown in Fig. \ref{fig-optics}.
+\begin{figure}[]
+\begin{center}
+\includegraphics[width=25pc]{fig/k18br.eps}
+\caption{\label{k18br} Schematic drawing of K1.8BR beam line in the J-PARC hadron experimental facility.}
+\end{center}
+\end{figure}
+
+\begin{figure}[]
+\begin{center}
+\includegraphics[width=0.9\columnwidth]{illustrator/optics.eps}
+\caption{\label{fig-optics} First-order beam envelope.}
+\end{center}
+\end{figure}
+
+\begin{table}[]
+\caption{Parameters of K1.8BR beam line as of May, 2013.}
+\begin{center}
+\begin{tabular}{ll}
+\hline\hline
+Production target & Au (50\% loss)\\
+Extraction Angle & 6$^\circ$ \\ 
+Momentum range & 1.2 GeV/c max.\\
+Acceptance & 2.0 msr $\cdot$ \%\\
+Momentum bite & $\pm$ 3 \%\\
+Beam Length (T1-FF) & 31.3 m\\
+\hline\hline
+\end{tabular}
+\end{center}
+\label{k18brtable}
+\end{table}%
+
+\subsection{Kaon beam tuning}
+Kaon beam tune was performed to maximize the number of kaons on the experimental target while keeping a pion contamination to the acceptable level.
+
+After the establishment of online particle identification triggers, we optimized the combination of ES1, CM1 and CM2 setting to maximize the kaon yield. Then the center of the vertical beam position was measured by changing two vertical slit positions. The horizontal position of beam was optimized by D3,D4 and D5 with a narrowed setting for the momentum slit. Currents of quadruple magnets were also scanned to increase the kaon yield and for better focus at FF. Finally, opening widths of two vertical slits and two horizontal slits were optimized in terms of a $K/\pi$ ratio and a total beam intensity.
+
+A typical kaon intensity during the experimental period was 1.5 $\times 10^5$ per spill with the $K^-/\pi^-$ ratio of $\sim$0.45. The optimized magnet settings and slit settings are summarized in Table \ref{tab-magnet} and Table \ref{tab-slit}, respectively.
+
+%The obtained setting of each magnet is tabulated in Table \ref{table-mag} with designed values by optical calculation code TRANSPORT, while the optimized slit setting and a typical beam typical parameters are summarized in Table \ref{table-slit} and Table \ref{table-beam}, respectively.  More detailed property of the beam will appear in Appendix.
+
+
+
+\begin{table}[]
+\caption[Parameters of the beam-line magnets.]{Parameters of the beam-line magnets. D5 field is a typical monitored value. Other field values are interpolations of measured points.}
+\begin{center}
+\begin{tabular}{llccccc}
+\hline\hline													
+Element	&	J-PARC	&	Gap or	&	Effective	&	Bend	&	Current	&	Field at pole	\\
+	&	designation	&	 bore/2 (cm)	&	length (cm)	&	(deg)	&	(A)	&	(kG)	\\
+\hline													
+D1	&	5C216SMIC	&	8	&	90.05	&	10	&	-365$\sim$-374	&	-6.5808$\sim$-6.7444	\\
+Q1	&	NQ312MIC	&	8	&	67.84	&		&	-357	&	-3.075	\\
+Q2	&	Q416MIC	&	10	&	87.04	&		&	-668	&	3.872	\\
+D2	&	8D218SMIC	&	15	&	99.65	&	15	&	-698	&	-8.7673	\\
+\hline
+IF-H	&	\multicolumn{4}{l}{Movable horizontal slit for acceptance control}		&		&		\\
+IF-V	&	\multicolumn{4}{l}{Movable vertical slit, (y$|\phi$)=0}					&		&		\\
+\hline
+Q3	&	Q410	&	10	&	54.72	&		&	-679	&	-4.108	\\
+O1	&	O503	&	12.5	&	15	&		&	-15	&	-0.29	\\
+Q4	&	Q410	&	10	&	54.72	&		&	-776	&	4.692	\\
+S1	&	SX504	&	12.5	&	27.6	&		&	-42	&	-0.29	\\
+CM1	&	4D604V	&	10	&	20	&	(0.856)	&	419	&	1.943	\\
+ES1	&	Separator	&	10	&	600	&		&	\multicolumn{2}{c}{E=-500 kV/10 cm}	\\
+CM2	&	4D604V	&	10	&	20	&	(0.856)	&	419	&	1.940	\\
+S2	&	SX504	&	12.5	&	27.6	&		&	-136	&	1.02	\\
+Q5	&	NQ510	&	12.5	&	56	&		&	-498	&	4.218	\\
+Q6	&	NQ610	&	15	&	57.2	&		&	-535	&	-4.316	\\
+\hline
+MOM	&	\multicolumn{5}{l}{Movable horizontal slit for momentum acceptance control}		&		\\
+MS1	&	\multicolumn{4}{l}{Movable vertical slit for $K$-$\pi$ separation }					&		&		\\
+	&	\multicolumn{4}{l}{($y|\phi$)=0, ($y|y$)=0.844, ($y|\theta\phi$)=($y|\phi\delta$)=0} 		&		&		\\
+\hline
+D3	&	6D330S	&	15	&	165.1	&	20	&	210	&	-7.064	\\
+S3	&	SX404	&	10	&	20	&		&	-34	&	-1.062	\\
+Q7	&	Q306	&	7.5	&	30.34	&		&	-464	&	4.026	\\
+D4	&	8D440S	&	20	&	198.9	&	60	&	-1936	&	-17.8907	\\
+Q8	&	NQ408	&	10	&	46.5	&		&	-110	&	0.671	\\
+D5	&	8D240S	&	20	&	195.9	&	55	&	-1663	&	-16.413	\\
+\hline\hline													
+\end{tabular}
+\end{center}
+\label{tab-magnet}
+\end{table}%
+
+
+\begin{table}[]
+\caption[Optimized slit settings.]{Optimized slit settings. All unit in mm.}
+\begin{center}
+\begin{tabular}{lcc}
+\hline\hline					
+IF-H	&	110	&	-110	\\
+IF-V	&	2.5	&	-1.1	\\
+Mass	&	1.75	&	-2.45	\\
+Mom	&	L 160.0	&	R -110.0	\\
+\hline\hline
+\end{tabular}
+\end{center}
+\label{tab-slit}
+\end{table}%

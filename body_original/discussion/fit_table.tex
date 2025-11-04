@@ -1,0 +1,30 @@
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & $\chi^2/NDF$ & $A_{I=0}$ & $A_{I=1}$   & $\epsilon$      \\
+    \hline
+    Model.A & $\fitAscaleChi$ & $\fitAscaleIzVal$     & $\fitAscaleIoVal$     & -     \\
+    & $\sim \fitAscaleChiNum$ & $\pm \fitAscaleIzErr$ & $\pm \fitAscaleIoErr$ & \\
+    \hline
+    Model.B & $\fitBscaleChi$ & $\fitBscaleIzVal$     & $\fitBscaleIoVal$     & -     \\
+    & $\sim \fitBscaleChiNum$ & $\pm \fitBscaleIzErr$ & $\pm \fitBscaleIoErr$ & \\
+    %% \hline
+    %% Model.B & $1865.67/43$    & -  & - & $0.926$ \\
+    %% 位相パラメーターのみ  & $\sim 44$ &  & & $\pm 0.007$ \\
+    
+    \hline
+    Model.B & $\fitBChi$ & $\fitBIzVal$     & $\fitBIoVal$     & $\fitBphaseVal$     \\
+    位相パラメーターあり & $\sim \fitBChiNum$ & $\pm \fitBIzErr$ & $\pm \fitBIoErr$ & $\pm \fitBphaseErr$ \\
+    \hline
+    Model.B & $\fitBBChi$  & $\fitBBIzVal$     & $\fitBBIoVal$     & $\fitBBphaseVal$     \\
+    $I=1$を独立にフィット & $\sim \fitBBChiNum$ & $\pm \fitBBIzErr$ & $\pm \fitBBIoErr$ & $\pm \fitBBphaseErr$ \\
+    \hline
+  \end{tabular}
+  \caption{
+    The table represents fit result using the DCC calculation.
+    This indicates fit parameters for Fig.[\ref{fig:fit_A_scale},\ref{fig:fit_B_scale},\ref{fig:fit_B_fix_phase},\ref{fig:fit_B}] from above.
+  }
+  \label{table:fit}
+\end{table}
+

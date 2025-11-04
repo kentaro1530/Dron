@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+
+log=$(platex -interaction=nonstopmode main_analysis.tex)
+status=$?
+
+if [ $status -ne 0 ]; then
+    echo "エラーが起こりました"
+    parseTexError.js "$log"
+    exit 0;
+fi
+
+platex main_analysis.tex > /dev/null 2>&1
+dvipdfmx main_analysis.dvi
+
+

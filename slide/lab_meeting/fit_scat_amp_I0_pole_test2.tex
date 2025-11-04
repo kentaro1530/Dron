@@ -1,0 +1,16 @@
+\begin{frame}{Pole Parametersの見解}
+  \begin{itemize}
+  \item 値は$A,R$のBest Fitのものを使うべきだろう。
+  \item エラーはダブルガウシアン、ガウシアン、RMSの順で大きくなる。\\
+    $\rightarrow$ RMSはテールの成分が入るためガウシアンの2倍ほどになる\\
+    \hspace{3mm} 過大評価になっていないか？
+  \item $\Gamma$のヒストグラムはだいぶガウシアンからズレている。\\
+    $\rightarrow$ ガウシアン、ダブルガウシアン、MeanとRMSで大きくエラーが変わる。
+  \end{itemize}
+  Fitの違いによるエラーの差は系統誤差として取り込む。\\
+  $\rightarrow$その際、RMSの値を採用するかどうか？\\
+  \hspace{3mm} Mean/RMSを採用した場合、すべてこの手法でエラーが決まる。
+  \hspace{3mm}2-Gaussianのみを追加する場合、$M_{\pi \Sigma}$には影響しない  
+\end{frame}
+
+

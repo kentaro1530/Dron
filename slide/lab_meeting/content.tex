@@ -1,0 +1,29 @@
+\begin{frame}{Content}
+  \small
+  \begin{itemize}
+  \item \sout{ガウシアンでフィッティング}
+    $\rightarrow$ 明らかに左右非対称成分がある
+  \item \sout{MeanとRMSを使う方法}
+    $\rightarrow$ ピークじゃないテール部分に引っ張られる
+  \item 左右非対称なエラーを持つガウシアンのようなもの
+    \begin{equation*}
+      f_{fit}(x)=
+      \left\{
+      \begin{array}{ll}
+        A\exp(\frac{\sigma_h^2}{(x-M)^2}) & (x>M) \\
+        A\exp(\frac{\sigma_l^2}{(x-M)^2}) & (x<M)
+        \end{array}
+      \right.
+    \end{equation*}
+  \end{itemize}
+
+  \begin{itemize}
+  \item 全範囲でフィットするならまだテール成分に引っ張られている。\\
+    $\rightarrow$ 範囲を区切る。どの範囲が適当か?\\
+    ピークの高さの割合でフィット範囲を決める。\\
+    全領域、$\exp(-3^2/2)\sim 3\sigma$相当...$\exp(-1/2)\sim 1\sigma$まで$0.5\sigma$刻み。
+    % $\exp(-2.5^2/2)$、$\exp(-2^2/2)$、$\exp(1.5^2/2)$、$\exp(1/2)$。
+    \sout{フィットする$\sigma$の範囲を変えてみる。\\
+    フィットによって$M$も$\sigma_{h/l}$も変わるので範囲、$X \times \sigma$の$X$を決めて、\\繰り返し行い収束したところを使う。\\}
+  \end{itemize}
+\end{frame}

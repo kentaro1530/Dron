@@ -1,0 +1,13 @@
+\contentsline {chapter}{\numberline {1}Discussion}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}$\pi \Sigma $ spectra}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Mode decomposition of $d(K^-, p)$}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Mode decomposition of $d(K^-, n)$}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Comparison with DCC model}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Demonstration of fitting by DCC models}{8}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Conclusion}{12}{chapter.2}%
+\contentsline {chapter}{\numberline {A}Offline selection}{14}{appendix.A}%
+\contentsline {section}{\numberline {A.1}$d(K^-, n \pi ^+ \pi ^-)$}{14}{section.A.1}%
+\contentsline {section}{\numberline {A.2}$d(K^-, p \pi ^- \pi ^-)$}{15}{section.A.2}%
+\contentsline {chapter}{\numberline {B}Geant4 simulation}{16}{appendix.B}%
+\contentsline {chapter}{\numberline {C}$K^- d \rightarrow K^0 n n$ events}{20}{appendix.C}%
+\contentsline {chapter}{\numberline {D}$d(K^-, p)"\pi ^-\Lambda "/"\pi ^-\Sigma ^0"$ mode}{22}{appendix.D}%

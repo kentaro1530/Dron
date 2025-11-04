@@ -1,0 +1,101 @@
+xsxc\documentclass[11pt,a4paper,openright]{book}
+%\documentclass[11pt,a4paper,openany]{book}
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{graphicx}
+%\usepackage{float}
+%\usepackage{otf}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{amsmath}
+\pagestyle{headings}
+%\usepackage{citesort}
+
+%\setlength{\topmargin}{10mm} %上マージン　10mm
+\addtolength{\topmargin}{-5mm} % 標準のマージン(1inch)を引く
+\addtolength{\textheight}{12mm} %本文の長さ　(縦) 297-(10+27)= 250
+\usepackage{layouts}
+
+\newcommand\DocLength[1]{%
+  The value for \texttt{#1} is \printinunitsof{pt}\prntlen{\csname#1\endcsname}\par}
+
+%\addtolength{\oddsidemargin}{-20mm} 
+\addtolength{\marginparwidth}{-106pt} 
+\addtolength{\marginparsep}{-7pt} 
+\addtolength{\evensidemargin}{-70pt} 
+\addtolength{\oddsidemargin}{-22pt} 
+\addtolength{\evensidemargin}{-1in} 
+\addtolength{\oddsidemargin}{-1in} 
+\addtolength{\evensidemargin}{24mm} 
+\addtolength{\oddsidemargin}{36mm} 
+% 奇数ページ　左マージン　20mm
+%\addtolength{\oddsidemargin}{-1in} % 奇数ページ　標準のマージン(1inch)を引く
+%\setlength{\oddsidemargin}{10mm} % 偶数ページ　左マージン　10mm
+%\setlength{\evensidemargin}{10mm} % 偶数ページ　左マージン　10mm
+%\setlength{\evensidemargin}{30mm} % 偶数ページ　左マージン　10mm
+%\addtolength{\evensidemargin}{-1in} % 偶数ページ　標準のマージン(1inch)を引く
+\setlength{\textwidth}{150mm} %本文の長さ(横) 210 -(20+20) = 170
+\title{}
+\begin{document}
+\if0
+\DocLength{evensidemargin}
+\DocLength{oddsidemargin}
+\DocLength{hoffset}
+\DocLength{marginparwidth}
+\DocLength{marginparsep}
+\fi
+\input{abstruct.tex}
+\cleardoublepage
+%\setcounter{page}{1}
+\renewcommand{\thepage}{\roman{page}}
+\tableofcontents
+\listoffigures
+\listoftables
+\cleardoublepage
+\setcounter{page}{1}
+\renewcommand{\thepage}{\arabic{page}}
+\input{intro.tex}
+
+\chapter{Experimental method}
+\input{setup.tex}
+\input{jparc.tex}
+\input{beamline.tex}
+\input{lhe3.tex}
+\input{cds.tex}
+\input{forward.tex}
+\input{daq.tex}
+
+\chapter{Data analysis}
+\input{detana.tex}
+\input{anabeam.tex}
+\input{anacds.tex}
+\input{ananc.tex}
+\input{enescale.tex}
+\input{norm.tex}
+
+\input{spectral1.tex}
+\input{multin.tex}
+\input{kppassumption.tex}
+\input{conclusion.tex} 
+
+\input{acknowledgement.tex}
+%\chapter*{Appendix}
+\appendix
+\input{geant.tex}
+\input{proton.tex}
+\input{lp.tex}
+
+\if0
+\chapter{Geometry}
+\chapter{Run dependences}
+\chapter{Energy loss correction}
+\section{Energy loss correction for kaon beam}
+\section{Energy loss correction for CDC tracks}
+\section{Energy loss correction for forward charged particles}
+\chapter{Kaon beam tuning}
+\fi
+
+\bibliographystyle{aip}
+\bibliography{citelist}
+
+
+\end{document}

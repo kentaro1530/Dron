@@ -1,0 +1,9 @@
+*.aux
+*.dvi
+*.log
+/kyoumu/
+/bin/
+/body_old/
+/pic_20191221/
+/kyoumu_2020/
+/body_20250729/

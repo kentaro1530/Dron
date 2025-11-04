@@ -1,0 +1,77 @@
+\subsection{The spectrum of the $d(K^-, n)"n K^0"$}
+
+\begin{figure}
+  \centering
+  \begin{tabular}{cc}
+    \begin{minipage}{0.6\hsize}
+      \includegraphics[width=7cm]{../pic/Run78/QE/KN_MM_wK0_tag.eps}
+    \end{minipage}
+    \begin{minipage}{0.4\hsize}
+      \includegraphics[width=4cm]{../pic/Run78/QE/IM_pipi.eps}
+    \end{minipage}
+  \end{tabular}
+  \caption{
+    Right figure shows $K^0$ selection region and estimated background events which is zoom up of left figure of Fig\ref{fig:IM_fit}.
+    Red lines indicate selection region.
+    left figure shows $d(K^-, n)"n K^0"$ spectra with esmated backgrounds by MC template.
+  }
+  \label{fig:KN_MM_K0}
+\end{figure}
+
+Although the reaction can not measured below the $\bar{K}N$ threshold, 
+in the $K^0$ take the strangeness, 
+so these events are one of the strongest candidate of the prove for 1-step reaction strength of the $K^-N\rightarrow \bar{K}n$ reaction.\\
+The backgrounds were estimated using the template fitting result which was shown in the right figure of Fit\ref{fig:KN_MM_K0}.
+The background spectra shape of the $d(K^-, n)"n K^0"$ was indicated in the left figure of the same figure.
+These spectra will be collected by the acceptance of the CDS using	the $K^0$ kinematics because detected particles by the CDS came from the $K^0$ decay.
+The $K^0$ kinematics was represented as 2 variables function about the $\cos\theta$ and the absolute momentum value and
+the acceptance of the CDS was collected event-by-event using the acceptance as weight function as the following equation.
+
+\begin{equation}
+  N_{corr}(m_{n K^0}) = \sum N(m_{n K^0}, \cos\theta_{K^0}, p_{K^0}) \cdot \frac{1}{A(\cos\theta_{K^0}, p_{K^0})} \label{eq:corr_K0} 
+\end{equation}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=7cm]{../pic/Run78/QE/K0_cos_mom_acc.eps}
+  \caption{
+    This figure shows the acceptance of the $K^-d\rightarrow K^0 n n$ reaction which was estimated by the Monte Calro simulation.
+  }
+  \label{fig:K0_acc}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tabular}{cc}
+    \begin{minipage}{0.5\hsize}
+      \includegraphics[width=7cm]{../pic/Run78/QE/K0_cos_mom_data.eps}
+    \end{minipage}
+
+    \begin{minipage}{0.5\hsize}
+      \includegraphics[width=7cm]{../pic/Run78/QE/K0_cos_mom_BG.eps}
+    \end{minipage}
+  \end{tabular}
+  \caption{
+    These figure shows about $K^0$ emit angle and momentum in the experimental frame.
+    Left figure shows about data and right figure shows background estimated by the Monte Calro.
+  }
+  \label{fig:K0_cos_mom}
+\end{figure}
+
+For this collection, the acceptance was estimated using the $K^- d \rightarrow n_{forwad} (K^0 n)$ reaction.
+The mass of the $n K^0$ was generated flat distribution from the $K^0 n$ mass threshold to the kinematical threshold
+to accumulate widely and isotropically acceptance which was shown in Fig\ref{fig:K0_acc}
+This acceptance collection was adopted to the signal and the backgrounds.
+Fig\ref{fig:K0_cos_mom} shows the $K^0$ kinmatics distribution about the data and the backgrounds estimated by the MC sim.
+By this operation, we obtained the acceptance collected spectra as shown in Fig\ref{fig:KN_MM_K0_corr}.
+Because the data distribution located at the edge of the acceptance and the backgrounds widely distributed, in the acceptance corrected spectra, the signal was enhanced.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=8cm]{../pic/Run78/QE/K0_spec_wBG.eps}
+  \caption{
+    This figure shows acceptance corrected spectrum of the $d(K^-, n)"n K^0"$.
+    Black line indicates data and color plots indicate the background reproduced by the Monte Calro simulation.
+  }
+  \label{fig:KN_MM_K0_corr}
+\end{figure}

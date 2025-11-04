@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+log=$(platex -interaction=nonstopmode main.tex)
+status=$?
+
+if [ $status -ne 0 ]; then
+    echo "エラーが起こりました"
+    exit 0;
+fi
+
+platex main.tex > /dev/null 2>&1
+dvipdfmx main.dvi

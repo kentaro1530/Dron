@@ -1,0 +1,127 @@
+\documentclass[12pt,a4paper]{report}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL ../D-thesis.20140107/main.tex   Tue Jan 21 17:40:06 2014
+%DIF ADD main.tex                        Tue Jan 21 17:48:20 2014
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{graphicx}
+%\usepackage{float}
+%\usepackage{otf}
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{amsmath}
+\pagestyle{headings}
+%\usepackage{citesort}
+
+%\setlength{\topmargin}{10mm} %上マージン　10mm
+\addtolength{\topmargin}{-5mm} % 標準のマージン(1inch)を引く
+\addtolength{\textheight}{10mm} %本文の長さ　(縦) 297-(10+27)= 250
+
+\addtolength{\oddsidemargin}{-5mm} 
+\addtolength{\evensidemargin}{-5mm} 
+% 奇数ページ　左マージン　20mm
+%\addtolength{\oddsidemargin}{-1in} % 奇数ページ　標準のマージン(1inch)を引く
+%\setlength{\evensidemargin}{30mm} % 偶数ページ　左マージン　10mm
+%\addtolength{\evensidemargin}{-1in} % 偶数ページ　標準のマージン(1inch)を引く
+\setlength{\textwidth}{150mm} %本文の長さ(横) 210 -(20+20) = 170
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+\if0
+%\maketitle
+\thispagestyle{empty}
+
+\fi
+%\if0
+\input{abstruct.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+%\fi
+%\ \ 
+
+\DIFdelbegin %DIFDELCMD < \input{intro.tex}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \include{intro.tex}
+\DIFaddend %\if0
+\chapter{Experimental method}
+\input{setup.tex}
+\input{jparc.tex}
+%\section{Detectors for kaon beam}
+\input{beamline.tex}
+%\section{Liquid $^3$He target system}
+\input{lhe3.tex}
+%\section{Cylindrical detector system}
+\input{cds.tex}
+%\section{Forward particle detector system}
+\input{forward.tex}
+%\section{Data acquisition system}
+\input{daq.tex}
+
+%\fi
+%\if0
+\chapter{Detector analysis}
+%
+\input{detana.tex}
+\input{anabeam.tex}
+
+\input{anacds.tex}
+\input{ananc.tex}
+%\fi
+
+\input{enescale.tex}
+\input{norm.tex}
+%\if0
+%\fi
+%DIF > \tableofcontents
+\input{spectral1.tex}
+%\fi
+\DIFdelbegin %DIFDELCMD < \input{spectral2.tex}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > \input{spectral2.tex}
+\DIFaddbegin \input{multin.tex}
+\input{kppassumption.tex}
+\DIFaddend %\fi
+\input{discussion.tex} 
+\input{conclusion.tex} 
+
+%\if0
+\chapter*{Appendix}
+\appendix
+\input{geant.tex}
+\input{proton.tex}
+%
+\if0
+\chapter{Geometry}
+\chapter{Run dependences}
+\chapter{Energy loss correction}
+\section{Energy loss correction for kaon beam}
+\section{Energy loss correction for CDC tracks}
+\section{Energy loss correction for forward charged particles}
+\chapter{Kaon beam tuning}
+\fi
+%\if0
+\bibliographystyle{aip}
+\bibliography{citelist}
+%\fi
+
+
+\end{document}

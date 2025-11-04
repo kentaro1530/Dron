@@ -1,0 +1,200 @@
+\section{Materials in the spectrometer system}
+The materials in the spectrometer system cause the energy losses, the multiple scattering, and the reaction with other than target for the particles. The net effects are expected to result in systematic shifts of the measured momenta, event losses, and additional deteriorations of the spectrometer resolutions. The momenta of the charged particles are corrected particle by particle taking into account the materials on their trajectory. We developed the correction routine for the kaon beam, the charged particles in the CDS and the forward-going charged particles, where the materials summarized in Table \ref{tab-matbeam}, Table \ref{tab-matcdc}, and Table \ref{tab-matforward} were considered, respectively. The wires, the cathode planes and the windows of the chambers, the windows and the reflection sheet of the AC, and the wrapping of the scintillator bars were not taken into account, since their contribution is negligible compared to the required precision of a few MeV$/c$. 
+
+\begin{table}
+\begin{center}
+\caption[Summary of beam-line materials.]{Summary of beam-line materials between the center of BLC2 ($z$=-130 cm) and the FF. Typical momentum reductions of the kaon and the proton beams at 1 GeV/$c$ are calculated using the Bethe-Bloch formula. }
+\label{tab-matbeam}
+\begin{tabular}{l|lccccc}
+\hline\hline
+Component	&	Material	&	Density	&	\multicolumn{2}{c}{Thickness}			&	\multicolumn{2}{c}{$-\delta p$ (MeV/$c$)}				\\
+	&		&	g/cm$^3$	&	mm	&	g/cm$^2$	&	1 GeV/$c$ kaon		&	proton	\\
+\hline														
+BLC2b	&	Ar-isoC$_4$H$_{10}$	&	0.0016	&	100	&	0.02	&	0.03		&	0.07	\\
+T0	&	Scintillator	&	1.03	&	10	&	1.03	&	2.4		&	4.2	\\
+AC	&	Aerogel	&	0.20	&	100	&	2.00	&	4		&	6.8	\\
+BPD	&	Scintillator	&	1.03	&	5	&	0.52	&	1.2		&	2.1	\\
+DEF	&	Scintillator	&	1.03	&	3	&	0.31	&	0.72		&	1.2	\\
+BPC	&	Ar-isoC$_4$H$_{10}$	&	0.0016	&	60	&	0.01	&	0.02		&	0.03	\\
+\hline														
+Target system	&		&		&		&		&			&		\\
+~~Chamber cap	&	aluminum	&	2.7	&	0.6	&	0.16	&	0.3		&	0.51	\\
+~~Radiation shield	&	aluminum	&	2.7	&	0.3	&	0.08	&	0.15		&	0.26	\\
+~~Cell cap	&	AlBeMet	&	2.07	&	0.6	&	0.12	&	0.23		&	0.51	\\
+~~Target	&	helium-3	&	0.081	&	60	&	0.49	&	1.45		&	2.45	\\
+\hline														
+Air	&	Air	&	0.0012	&	940	&	0.11	&	0.24		&	0.40	\\
+\hline														
+Total	&		&		&		&	5.02	&	10.7		&	18.5	\\
+\hline\hline						
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\begin{table}[]
+\begin{center}
+\caption{Summary of materials used in the energy loss correction of the CDC track.}
+\label{tab-matcdc}
+\begin{tabular}{l|lccc}
+\hline\hline									
+Component	&	Material	&	Density	&	\multicolumn{2}{c}{Thickness}	\\
+	&		&	g/cm$^3$	&	mm	&	g/cm$^2$	\\
+\hline									
+Target system	&		&		&		&	0	\\
+~~Target	&	helium-3	&	0.081	&	34	&	0.28	\\
+~~Cell wall	&	beryllium	&	1.85	&	0.3	&	0.06	\\
+~~Radiation shield	&	aluminum	&	2.70	&	0.3	&	0.08	\\
+~~CFRP	&	CFRP	&	1.70	&	1	&	0.17	\\
+\hline									
+Air	&	Air	&	0.0012	&	70	&	0.0084	\\
+IH	&	Scintillator	&	1.03	&	3	&	0.31	\\
+\hline									
+CDC	&		&		&		&		\\
+~~CFRP	&	CFRP	&	1.70	&	1	&	0.17	\\
+~~Gas	&	Ar-C$_2$H$_6$	&	0.0015	&	380	&	0.057	\\
+\hline									
+Total	&		&		&		&	1.13	\\
+\hline\hline									
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[]
+\begin{center}
+\caption[Summary of materials between the FF and the forward counters.]{Summary of materials between the FF and the forward counters. Typical momentum reduction of the proton beam at 1 GeV/$c$ is calculated using the Bethe-Bloch formula. }
+\label{tab-matforward}
+\begin{tabular}{l|lcccc}
+\hline\hline					
+Component	&	Material	&	Density	&	\multicolumn{2}{c}{Thickness}	&	$-\delta p$ (MeV/$c$)	\\
+	&		&	g/cm$^3$	&	mm	&	g/cm$^2$	&	1 GeV/$c$ proton	\\
+\hline											
+Target	&		&		&		&		&		\\
+~~Target	&	helium-3	&	0.081	&	80	&	0.65	&	3.3	\\
+~~Cell cap	&	AlBeMet	&	2.07	&	0.6	&	0.12	&	0.39	\\
+~~Rad. shield	&	aluminum	&	2.7	&	0.3	&	0.081	&	0.26	\\
+~~Frange	&	SUS304	&	8.9	&	0.3	&	0.27	&	0.26	\\
+\hline											
+BVC	&	Scintillator	&	1.03	&	10	&	1.03	&	4.2	\\
+FDC1	&	Ar-C$_6$H$_{10}$	&	0.0016	&	100	&	0.016	&	0.053	\\
+\hline\hline											
+to PC	&		&		&		&		&		\\
+~~Air	&	Air	&	0.0012	&	1.3E+04	&	1.57	&	5.2	\\
+\hline											
+~~Total	&		&		&		&	3.71	&	13.6	\\
+\hline\hline											
+to NC	&		&		&		&		&		\\
+~~Air	&	Air	&	0.0012	&	1.4E+04	&	1.69	&		\\
+~~CVC	&	Scintillator	&	1.03	&	30	&	3.09	&		\\
+\hline											
+~~Total	&		&		&		&	6.92	&		\\
+\hline\hline									
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Data acquisition}
+\subsection{Data acquisition system}
+The on-line data acquisition system (DAQ) consists of the TKO\cite{Ohska:1986gf,Group:1985tn}, VME, and PC Linux.
+The signals from the detectors are fed into ADC and TDC modules slotted into 10 TKO crates.
+They are read in parallel with 10 VME-SMPs (super memory partner\cite{Shiozawa:1994ja}) via a TKO SCH (super
+controller head). The data stored in a buffer memory of the SMP is transferred to the DAQ-PC through SBS Bit3 VME-to-PCI bridges.
+Additionally, two DAQ systems consist of VME and PC Linux are used. One is for spill by spill readout of scalers, and the other one is for multi-hit TDC readout for beam-line counters. To secure event matching in the offline analysis, an event and a spill numbers are distributed the three DAQ systems by using a master trigger module and receiver modules and event matching is done offline.
+The status of the detector system, such as temperature of the cryogenic target system and the magnetic field of the D5 magnet  was recorded by using LabVIEW based program.
+
+Since current DAQ system has no buffer memory in TDC and ADC modules, the fast clear scheme is adopted to efficiently accumulate the ($K^-,N$) events. The $1^{st}$ level trigger is constructed by the beam line detectors and CDS, and then TDC common start/stop signals and ADC timing gates are distributed to each module, followed by analog-to-digital conversion. Signals of the forward counters reach the DAQ system 100 ns or more after $1^{st}$ level decision. Then $2^{nd}$ level trigger is generated by the forward-counter signals. If $2^{nd}$ level is not acceptable, the analog-to-digital conversion is suspended and the modules are initialized for the next event ($Fast Clear$).
+
+The dead time of conversion in ADC/TDC and data-transfer from TKO-SCH to VME-SMP is $\sim$ 120 $\mu$s and $\sim$ 230 $\mu$s. respectively. The dead time caused by a data-transfer from VME-SMP to the PC-Linux is negligible by using two buffers in the VME-SMP. In the case of $Fast Clear$, it takes only $\sim$3 $\mu$s to be ready for the next event. During the main data taking period, a typical DAQ rate was about 800 events per spill with the live rate of $\sim$81\%.
+
+\subsection{Trigger scheme}
+We constructed a trigger scheme to satisfy the requirement to derive physical quantity out of the data. Table \ref{tab-trigger} shows a list of trigger mode in the production run. %These triggers are constructed from the first level triggers and the second level triggers listed in Table \ref{tab-trig2}.
+The trigger logic diagram is shown in Fig. \ref{fig-trig}.
+\subsubsection{Kaon beam trigger}
+The elementary beam trigger is constructed by coincidence signals from the beam line counters, the BHD, T0 and the DEF. The kaon beam trigger $(K_{\rm beam})$ is selected from the beam trigger by using the kaon identification counter, i.e., a veto signal of the AC ($\overline{\rm AC}$) defines the kaon beam. It should be noted that antiprotons in the beam are eliminated upstream of the beam line by using the ES1, CM1, and CM2.
+	    A logical expression of the kaon beam trigger is given as 
+	    \begin{eqnarray} 
+	     \nonumber
+	      (K_{\rm beam}) \equiv ({\rm BHD}) \otimes ({\rm T0}) \otimes ({\rm DEF})
+	      \otimes (\overline{\rm AC}).
+	    \end{eqnarray}
+A pion beam trigger requires coincidence signal of AC. Then,
+	    \begin{eqnarray} 
+	     \nonumber
+	      (\pi_{\rm beam}) \equiv ({\rm BHD}) \otimes ({\rm T0}) \otimes ({\rm DEF})
+	      \otimes ({\rm AC}).
+	    \end{eqnarray}
+
+ \subsubsection{Main trigger}
+ A two-level trigger logic for the in-flight $^3$He$(K^-, N$) reaction is applied. To reconstruct the reaction vertex by using the CDS, events with one or more CDH hits (${\rm CDH}^{1hit}$) are selected from the kaon beam trigger in the first level. In addition, a forward neutral trigger (Neutral) or a forward charged trigger (Charged) are required in the second level. The neutral trigger is composed of one or more hits on the neutron counter ($\rm NC$) and a veto signal of the charge veto counter ($\overline{\rm CVC}$). The forward charged trigger requires one or more hits on the charge veto counter and/or the proton counter. 
+The E15 main trigger is given as
+\begin{eqnarray} 	
+      (\rm{Main}) &\equiv& (K_{\rm beam}) \otimes ({\rm CDH}^{1hit})   \otimes \left( ({\rm Neutral}) \cup  ({\rm Charged}) \right), \nonumber
+\end{eqnarray}
+where, 
+\begin{eqnarray} 
+     	({\rm Charged}) &\equiv& ({\rm CVC}) \cup ({\rm PC})   \nonumber \\
+     	({\rm Neutral}) &\equiv& ({\rm NC}) \otimes (\overline{\rm CVC}).   \nonumber
+\end{eqnarray} 
+
+\subsubsection{Triggers for the neutron counter calibration}
+A time offset calibration is of vital importance to precisely measure momenta of the forward-going nucleons by TOF method. To calibrate the NC run by run, gamma-rays from the target are accumulated in addition to the main trigger. Note that although gamma-ray events are contaminated in the main trigger, it is not enough for the calibration purpose.
+Then, two triggers are introduced which are given as,
+\begin{eqnarray} 
+ (\pi_{beam})\otimes(\overline{\rm{BVC}})\otimes(\rm{Neutral}) \nonumber \\
+ (K_{beam})\otimes(\overline{\rm{BVC}})\otimes(\rm{Neutral}) \nonumber ,
+ \end{eqnarray} 
+where the (Neutral) trigger is the second level one. 
+
+\subsubsection{Triggers for normalization}
+For the evaluation of reaction cross sections, the total kaon flux on the target is crucial. Therefore, elementary kaon beam data ($K_{beam}$) is also recorded. Minimum-biased beam data (BHD$\otimes$T0) is also mixed to monitor the performance of the AC and the DEF.
+
+\subsubsection{$K_{beam}$$\otimes$CDH triggers} 
+Since the main trigger rate is few hundreds per spill, the DAQ has still room to take additional data. Although primary purpose of the present experiment is the study with forward-going nucleons, some physical output without forward counters are also expected. Among them, the $\Lambda p$ events in the CDS are most interested in. Therefore, kaon beam triggers with the coincidence of the CDH hit(s) are mixed as much as possible to keep DAQ live rate better than 80\%.
+
+\subsubsection{Cosmic trigger}
+A cosmic data triggered by two or more CDH hits were recorded to monitor the CDS performance between the spills.
+
+ \begin{table}[]
+  \begin{center}
+   \caption{Summary of trigger conditions.}
+   \label{tab-trigger}
+   \begin{tabular}{l|cccl}
+\hline\hline									
+	&	\shortstack{request\\ / spill}	&	\shortstack{pre-scale\\ factor}	&	\shortstack{accept\\/ spill}	&	main usage	\\
+\hline									
+BHD$\otimes$T0	&	610k	&	50k	&	10	&	monitor AC\&DEF	\\
+$K_{beam}$	&	145k	&	7k	&	17	&	normarisation	\\
+$K_{beam}\otimes$CDH$^{1hit}$	&	48k	&	70	&	70	&		\\
+$K_{beam}\otimes$CDH$^{2hit}$	&	21k	&	7	&	280	&	$\Lambda p$ events	\\
+$K_{beam}\otimes$CDH$^{1hit}\otimes$Neutral	&	230	&	1	&	170	&	($K^-,n$)	\\
+$K_{beam}\otimes$CDH$^{1hit}\otimes$Charged	&	130	&	1	&	100	&	($K^-,p$)	\\
+$\pi_{beam}\otimes\overline{\rm{BVC}}\otimes$Neutral	&	480	&	10	&	40	&	NC calibration	\\
+$K_{beam}\otimes\overline{\rm{BVC}}\otimes$Neutral	&	850	&	10	&	70	&		\\
+\hline									
+Total	&	8.5k	&		&	680	&	($1^{st}$ accept $\sim$ 6.9k)	\\
+\hline\hline									
+\end{tabular}
+  \end{center}
+ \end{table}
+\subsection{Trigger efficiency \label{sec-trigeff}}
+In the data analysis, the $K_{beam}$ trigger data was the minimum-biased one to evaluate the number of incident kaons. Then, the trigger efficiency of the main trigger, $(K_{\rm beam}) \otimes ({\rm CDH}^{1hit}) \otimes \left( ({\rm Neutral}) \cup ({\rm Charged}) \right)$, was evaluated in two steps. The $({\rm CDH}^{1hit})$ trigger efficiency was evaluated first using the $K_{beam}$ data. The $({\rm CDH}^{1hit})$ trigger was reconstructed in the offline analysis and then checked the $(K_{\rm beam}) \otimes ({\rm CDH}^{1hit})$ trigger flag. The efficiency was evaluated to be (98.6 $\pm$ 0.1)\%, where the statistical one. The systematic error in the offline coincidence gate of the CDH signal with the kaon beam was evaluated to be negligibly small. Then the (Neutral)$\cup$(Charged) trigger efficiency was evaluated in a similar way to be (99.83 $\pm$ 0.01)\% with the $(K_{\rm beam}) \otimes ({\rm CDH}^{1hit})$ trigger data. The efficiency of the main trigger was obtained as the multiple of the two efficiency to be (98.3 $\pm$ 0.1)\%.
+
+Note that the present trigger condition generates the $2^{nd}$ level trigger by any signals from the forward counters, the NC, the CVC, and the PC, since the pre-scale factors of the (Neutral) and the (Charged) triggers were 1. In the analysis, we did not distinguish the two $2^{nd}$ level triggers, and performed the same analysis procedure as described in Sec. \ref{sec-ananc}. 
+
+\subsection{DAQ live rate \label{sec-daqrate}}
+The DAQ live rate can be obtained as the ratio of the number of accepted $1^{st}$ level triggers to that of requested ones. Typical numbers per spill of the accepted $1^{st}$ level triggers and the $1^{st}$ level requests are $\sim$8500 and $\sim$ 6900, respectively. Considering the fluctuation in the experimental period as the error, the DAQ live rate was obtained to be (81.5 $\pm$ 0.7)\% at the data acquisition rate of $\sim$680 events per spill.
+
+\subsection{Data summary}
+The production of present experiment was carried out from May 18th, 2013 to May 23rd, 2013, after a short period of beam-tuning and separated calibration runs. The calibration runs contained target empty runs for the fiducial volume study, proton beam through runs to calibrate the beam absolute momentum and pion beam runs for chamber position calibrations and ADC calibrations. The field of the Ushiwaka was scanned in the dedicated run to irradiate pions on the all segments of the NC and the PC.
+
+The total primary beam amount we received in the physics run was $\sim$12 kW$\times$week. The integrated number of kaons evaluated by scaler count of the kaon trigger was 7.52 $\times 10^9$, $\sim$70\% of which were focused on the $^3$He target. %A summary of data acquisition in data used in the current analysis is tabulated in Table \ref{tab-data}.
+
+\begin{landscape}
+  \begin{figure}[]
+   \begin{center}
+    \includegraphics[width=\columnwidth]{fig/trigger_for_dth.eps}
+    \caption{Logic diagram of the trigger circuit.}
+    \label{fig-trig}
+   \end{center}
+  \end{figure}  
+\end{landscape}

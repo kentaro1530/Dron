@@ -1,0 +1,663 @@
+%% Author_tex.tex
+%% V1.1
+%% 2012/18/6
+%% Revised on 2015/20/1
+%%
+%% developed by Techset
+%%
+%% This file describes the coding for ptephy_v1.cls
+%\DeclareFontShape{JT1}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tmin
+%    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+%    <-> tmin10}{}
+%\DeclareFontShape{JY1}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*min
+%    <10.95><12><14.4><17.28><20.74><24.88> min10
+%    <-> min10}{}
+%\DeclareFontShape{JT1}{mc}{b}{n}{<5> <6> <7> <8> <9> <10> sgen*tmin
+%    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+%    <-> tmin10}{}
+%\DeclareFontShape{JY1}{mc}{b}{n}{<5> <6> <7> <8> <9> <10> sgen*tmin
+%    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+%    <-> tmin10}{}    
+%\documentclass{ptephy_v1}%%%%where ptephy_v1 is the template name
+%\documentclass[preprint]{ptephy_v1}%%%%%% to generate preprint number
+%\documentclass{ptephy_v1}%%%%%% to generate preprint number with ptep logo
+\documentclass[letterpaper]{ptephy_v1}
+\preprintnumber{XXXX-XXXX} %%% %%% Insert preprint number here
+%The authors can define any packages after the \documentclass{ptephy_v1} command.
+
+%\usepackage{amsmath} for dealing with mathematics,
+%\usepackage{amsthm} for dealing with theorem environments,
+%\usepackage{hyperref} for linking the cross references
+%\usepackage{graphics} for dealing with figures.
+%\usepackage{algorithmic} for describing algorithms
+\usepackage{subfig} %for getting the subfigures e.g., "Figure 1a and 1b" etc.
+%\usepackage{url} It provides better support for handling and breaking URLs.
+%\usepackage{subfigure}
+%The author can find the documentation of additional supporting files from "http://www.ctan.org"
+\usepackage{type1cm}
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{condition}{Condition}
+
+\begin{document}
+
+%\title{Insert the article title here}
+\title{
+Structure near $K^-$+$p$+$p$ threshold in the in-flight $^3$He$(K^-,\Lambda p)n$ reaction}
+%Unexpected excess near $K^-$+$p$+$p$ threshold on the in-flight $^3$He$(K^-,\Lambda p)n_{missing}$ reaction } 
+%Hint for S=-1 di-baryonic state on $K^-pp$ threshold via $\Lambda pn $ final state}
+
+
+%%%% To generate auto affiliation numbers please use \author{}\affil{} command
+
+\author{\textbf{J-PARC E15 Collaboration}\\Y.~Sada} %{RCNP},
+\affil{\small{Research Center for Nuclear Physics (RCNP), Osaka University,
+ Osaka, 567-0047, Japan}  }%[1]
+
+\author[1]{S.~Ajimura}%{RCNP},
+%\affil{Research Center for Nuclear Physics (RCNP), Osaka University, Osaka, 567-0047, Japan }
+\author{M.~Bazzi}%{Victoria},
+\affil{ Laboratori Nazionali di Frascati dell' INFN, I-00044 Frascati, Italy }%[2]
+\author{G.~Beer}%{Victoria},
+\affil{ Department of Physics and Astronomy, University of Victoria,
+ Victoria BC V8W 3P6, Canada }%[3]
+\author{H.~Bhang}%{Seoul},
+\affil{ Department of Physics, Seoul National University, Seoul,
+ 151-742, South Korea }%[4]
+\author{M.~Bragadireanu},%{INFNHH},
+\affil{ National Institute of Physics and Nuclear Engineering - IFIN
+ HH, Romania }%[5]
+\author{P.~Buehler}%{SMI},
+\affil{ Stefan-Meyer-Institut f\"{u}r subatomare Physik, A-1090 Vienna,
+ Austria }%[6]
+\author[7,9]{L.~Busso}%{Torino,TorinoU},
+\affil{ INFN Sezione di Torino, Torino, Italy }%[7]
+\author[6]{M.~Cargnelli}%{SMI},
+\author[4]{S.~Choi}%{Seoul},
+\author[2]{C.~Curceanu}%{Frascati},
+%\affil{ Laboratori Nazionali di Frascati dell' INFN, I-00044 Frascati, Italy }%[7]
+\author{S.~Enomoto}%{Osaka},
+\affil{ High Energy Accelerator Research Organization (KEK), Tsukuba,
+ 305-0801, Japan }%[8]
+\author[7,9]{D.~Faso}%{Torino,TorinoU},
+\affil{ Dipartimento di Fisica Generale, Universita' di Torino, Torino,
+ Italy }%[9]
+
+\author{H.~Fujioka}%{Kyoto},
+\affil{ Department of Physics, Kyoto University, Kyoto, 606-8502, Japan }%[10]
+\author{Y.~Fujiwara}%{Tokyo},
+\affil{ Department of Physics, The University of Tokyo, Tokyo,
+ 113-0033, Japan }%[11]
+\author{T.~Fukuda}%{OsakaE},
+\affil{ Laboratory of Physics, Osaka Electro-Communication University,
+ Osaka, 572-8530, Japan }%[12]
+\author[2]{C.~Guaraldo}%{Frascati},
+\author{T.~Hashimoto}
+\affil{ RIKEN Nishina Center, RIKEN, Wako, 351-0198, Japan }%[13]
+\author[11]{R.~S.~Hayano}%{Tokyo},
+\author[1]{T.~Hiraiwa}%{RCNP},
+\author[8]{M.~Iio}%{KEK},
+\author[2]{M.~Iliescu}%{Frascati},
+\author[1]{K.~Inoue}%{Osaka},
+\author[10]{Y.~Ishiguro}%{Kyoto},
+\author[11]{T.~Ishikawa}%{Tokyo},
+\author[8]{S.~Ishimoto}%{KEK},
+\author[6]{T.~Ishiwatari}%{SMI},
+\author[13]{K.~Itahashi}%{RIKEN},
+
+\author[8]{M.~Iwai}%{KEK},
+\author[14,13]{M.~Iwasaki}%{TITEC,RIKEN},
+\affil{ Department of Physics, Tokyo Institute of Technology, Tokyo,
+ 152-8551, Japan }%[14]
+\author[13]{Y.~Kato}%{RIKEN},
+\author{S.~Kawasaki}%{Osaka},
+\affil{ Department of Physics, Osaka University, Osaka, 560-0043, Japan }%[15]
+\author{P.~Kienle\thanks{deceased}}%{TUM},
+\affil{ Technische Universit\"{a}t M\"{u}nchen, D-85748, Garching, Germany }%[16]
+\author[14]{H.~Kou}%{TITEC},
+\author[13]{Y.~Ma}%{RIKEN},
+\author[6]{J.~Marton}%{SMI},
+\author{Y.~Matsuda}%{komaba},
+\affil{ Graduate School of Arts and Sciences, The University of Tokyo,
+ Tokyo, 153-8902, Japan }%[17]
+\author[12]{Y.~Mizoi}%{OsakaE},
+\author[7]{O.~Morra}%{Torino},
+\author[10]{T.~Nagae}%{Kyoto},
+\author[1]{H.~Noumi}%{RCNP},
+\author[13,1]{H.~Ohnishi}%{RIKEN},
+\author[13]{S.~Okada}%{RIKEN},
+\author[13]{H.~Outa}%{RIKEN},
+\author[2]{K.~Piscicchia}%{Frascati},
+%\author[7]{M.~Poli~Lener}%{Frascati},
+\author[2]{A.~Romero~Vidal}%{Frascati},
+\author[15]{A.~Sakaguchi}%{Osaka},
+\author[13]{F.~Sakuma}%{RIKEN},
+\author[13]{M.~Sato}%{RIKEN},
+\author[2]{A.~Scordo}%{Frascati},
+\author[8]{M.~Sekimoto}%{KEK},
+\author[2]{H.~Shi}
+\author[2,5]{D.~Sirghi}%{Frascati,INFNHH},
+\author[2,5]{F.~Sirghi}%{Frascati,INFNHH},
+\author[6]{K.~Suzuki}%{SMI},
+\author[8]{S.~Suzuki}%{KEK},
+\author[11]{T.~Suzuki}%{Tokyo},
+\author{K.~Tanida}%{Seoul},
+\affil{ ASRC, Japan Atomic Energy Agency, Ibaraki 319-1195, Japan}%[18]
+\author{H.~Tatsuno}%{Frascati},
+\affil{Department of Chemical Physics, Lund University, Lund, 221 00, Sweden}%[19]
+\author[14]{M.~Tokuda}%{TITEC},
+\author[1]{D.~Tomono}%{RIKEN},
+\author[8]{A.~Toyoda}%{KEK},
+\author{K.~Tsukada}%{Tohoku},
+\affil{ Department of Physics, Tohoku University, Sendai,
+ 980-8578, Japan }%[20]
+\author[2,21]{O.~Vazquez~Doce}%{Frascati, ECUTUM},
+\affil{ Excellence Cluster Universe, Technische Universit\"{a}t
+M\"{u}nchen, D-85748, Garching, Germany }%[21]
+\author[6]{E.~Widmann}%{SMI},
+\author[6]{B.~K.~Wuenschek}%{SMI},
+\author[15]{T.~Yamaga}%{Osaka},
+\author[11,13]{T.~Yamazaki}%{Tokyo,RIKEN},
+\author{H.~Yim}%{KIRAMS},
+\affil{ Korea Institute of Radiological and Medical Sciences (KIRAMS),
+ Seoul, 139-706, South Korea@
+\email{sada@rcnp.osaka-u.ac.jp}}%[22]
+\author[13]{Q.~Zhang}%{RIKEN},
+\author[6]{J.~Zmeskal}%{SMI}, 
+
+%\author{Insert first author name here}
+%\affil{Insert first author address here \email{xxxx@xxxx.ac.jp}}
+
+%\author{Insert second author name here}
+%\affil{Insert second author address here}
+
+%\author{Insert third author name here}
+%\author[3]{Insert fourth author name here} %%% Use optional bracket [3] to change the respective address
+%\affil{Insert third author address here}
+
+%\author{Insert last author name here\thanks{These authors contributed equally to this work}}
+%\affil{Insert last author address here}
+
+%%% To include the collaborator name... Please use the command "\collaborator"
+%%% For example: \collaborator{ATLAS Collaboration}
+
+\begin{abstract}%
+
+To search for an S= -1 di-baryonic state which decays to $\Lambda p$, 
+the $ {\rm{}^3He}(K^-,\Lambda p)n_{missing}$ reaction was studied at 1.0 GeV/$c$. 
+%It is the first time to study multi nucleon  absorption of kaon in in-flight reaction.
+Unobserved neutrons were kinematically identified from the missing mass $M_X$ of the $ {\rm{}^3He}(K^-,\Lambda p)X$ reaction in order to have a large acceptance for the $\Lambda pn$ final state.
+The observed $\Lambda p n$ events, distributed widely over the kinematically allowed region of the Dalitz plot, establish that the major component comes from a three nucleon absorption process.
+%, 3NA, along with the rather weak 2NA branch with neutron spectator. 
+A concentration of events at a specific neutron kinetic energy was observed in a region of low momentum transfer to the $\Lambda p$.
+% $\Lambda p $ invariant distribution also indicates the peak structure near $K^-+p+p$ threshold, which could not be explained by multi-nucleon absorption processes.
+To account for the observed peak structure, the simplest S-wave pole was assumed to exist in the reaction channel, having a Breit-Wigner form in energy and with a Gaussian form-factor. 
+A minimum $\chi^2$ method was applied to deduce its mass $M_X\ =$ 2355 $ ^{+ 6} _{ - 8}$ (stat.) $ \pm 12$ (syst.) MeV/$c^2$, and decay-width $\Gamma _X\ = $ 110 $ ^{+ 19} _{ - 17}$ (stat.) $ \pm 27$ (syst.) MeV/$c^2$, respectively. The form factor parameter $Q_X \sim$ 400 MeV/$c$ implies that the range of the interaction is about 0.5 fm.
+
+%A peak structure was observed in $\Lambda p$ invariant mass spectrum in $\Lambda pn$ final state.
+%To estimate background contributions to the spectra, such as multi-nucleon absorption and multi-pion emission processes, we performed a Monte Calro simulation, and fitted our spectra both $\Lambda p$ invariant mass and missing mass spectra of $ {\rm{}^3He}(K^-,\Lambda p)X$. 
+%Fitting shows that the peak structure cannot be explain only those background processes. 
+%We also found that the contribution of two nucleon absorption ($\Lambda p+ n_{spec.} $) is as weak as 5 \% compare to other processes.
+%To understand peak structure,
+%one of the simplest assumption is the existence of near-threshold single-pole, whose final state is $\Lambda$p. 
+%To evaluate mass and $\Gamma $ of single-pole structure, minimum $\chi ^2$ method was performed.
+%This assumption is able to reproduce our spectra, when mass and  width of single-pole locate at $M_X\ =$ 2363 $ ^{+ 6} _{ - 6}$ (stat.) $ \pm\ X$ (syst.) MeV/c$^2$ and $\Gamma _X\ = $ 111 $ ^{+ 21} _{ - 19}$ (stat.) $ \pm\ X$ (syst.) MeV/c$^2$.
+
+
+
+
+\end{abstract}
+
+\subjectindex{D01, D33}
+
+\maketitle
+
+
+\section{Introduction}
+
+The $\bar{K}N$ interaction is known to be strongly attractive from low-energy  scattering data \cite{lowsca} and X-ray spectroscopy of kaonic atoms \cite{katom}.
+By assuming that the $\Lambda $(1405) is a $K^-p$ bound state, the existence of a kaonic nuclear bound state has been predicted \cite{AY1, AY2}.
+Observation of a kaonic nuclear bound state would provide definitive information on the $\bar{K}N$ interaction in the sub-threshold region, as well as the nature of $\Lambda$(1405).
+
+Both theoretical and experimental advances have been made in the last decade. Especially, careful attention has been paid to the simplest kaonic nuclear $\bar{K}NN$ state.
+Theoretically, all calculations predict the existence of a bound state. However, the predicted  $\bar{K}NN$ pole positions, depending on $\bar{K}N$ interaction models, are scattered. For the energy independent model (static calculation), the binding energy is 47 -- 95 MeV \cite{AY2}-\cite{tin6}. On the other hand, it becomes 9 -- 32
+MeV \cite{tin6}-\cite{te2} for the energy dependent case. The widths are also widely scattered between 34 -- 110 MeV/$c^2$.
+
+   
+Experimentally, there are many reports on observed peak structure $\sim$100 MeV below the $\bar{K}NN$ production threshold. 
+The FINUDA  group reported a peak structure in the back-to-back $\Lambda p$ invariant mass spectra via the  stopped kaon reaction on $^6$Li, $^7$Li and ${}^{12}$C targets \cite{finuda} with binding energy (B.E.)  115 $^{+6}_{-5}$ MeV, and a width ($\Gamma $) 67 $^{+14}_{-11}$ (stat.) $^{+2}_{-3}$ (syst.) MeV/$c^2$. 
+The DISTO group observed $\bar{K}NN$ decaying to $\Lambda p$ in $pp$ collisions at 2.85 GeV, with a B.E. of 103 $\pm 3$ (stat.) $\pm $5 (syst. ) MeV, and $\Gamma $ of 118 $\pm $8 (stat.) $\pm $10  (syst.) MeV/$c^2$ \cite{disto}. 
+In the pion induced reaction, d($\pi^+$,$K^+$) at 1.69 GeV/$c$, the E27 group observed ``$K^-pp$"-like structure in the $\Sigma ^0p$ decay mode at B.E. = 95 $^{+18}_{-17}$ (stat.) $^{+30}_{-21} $ (syst.) MeV, $\Gamma $ = 162  $^{+87}_{-45}$ (stat.) $^{+66}_{-78}$ (syst.) MeV/$c^2$ \cite{e27}. 
+Conversely, no significant structure was observed in a SPring-8/LEPS $\gamma$ induced inclusive experiment \cite{leps} or in a proton-proton interaction at HADES/GSI \cite{hades}. 
+%Indeed Ref. \cite{hades2} claims that the spectra of the $pp \rightarrow K^+ \Lambda p $  reaction can be explain by $N^ *$ resonances without the existence of the $\bar{K}NN$ state. 
+Also, for the kaon stopped reaction, the other interpretations ($i.e. $  two nucleon absorption of kaons which have the final state $\Lambda p$ or $\Sigma ^0 p$) are widely discussed \cite{finuda2,kloe}. Thus, the evidence for kaonic nuclei remains controversial. 
+
+In an attempt to clarify this situation, the E15 experiment on the $K^- + ^3{\rm He}$ reaction at $p_{K^-} =1$ GeV/$c$ is under way at J-PARC. The first physics data were accumulated in May 2013. 
+By using an in-flight reaction and a light nuclear target, backgrounds from multi-nucleon absorption processes and hyperon decays are expected to be kinematically discriminated from the  $\bar{K}NN$ signal. 
+%Moreover, when neutrons are scattered in the forward direction, back-scattered kaons, produced at relatively low momentum ($\sim$200 MeV/$c$), are expected to have a large probability of sticking to spectator nucleons.  
+The semi-inclusive forward neutron spectrum in the E15 experiment has a long sub-threshold tail reaching  $\sim $ 100 MeV below the $\bar{K} NN$ threshold, but no significant structure was seen in the deeply-bound region  \cite{hashimoto}.
+
+In this paper, we present a study of the $K^- + ^3{\rm He}$ reaction at $p_{K^-} =1$ GeV/$c$ focusing on the $\Lambda p$ invariant mass spectrum, in particular on the $\Lambda pn$ final state for the May 2013 data.  
+
+
+
+\section{The Experimental apparatus}
+Here, the experimental apparatus relevant to the $\Lambda p n$ study is briefly described.
+%In this section, experimental apparatus relevant to this analysis are briefly discussed.
+The ongoing experiment is being conducted at the J-PARC 30 GeV syncrotron (MR).
+In May 2013, typical beam intensity of the primary proton beam in MR was 30 $\times$ 10$^{12}$ per spill, 
+where spill length was 2 seconds with a 6 second repetition cycle.
+A high intensity proton beam from MR 
+impinges on a gold target, and 1 GeV/$c$ $K^-$s are selected by the K1.8BR beamline spectrometer and purified  with an electrostatic separator. The typical $K^-$/$\pi$ ratio was 0.45.
+At the online trigger level, $K^-$s are selected with an Aerogel Cherenkov counter.
+The purity of the $K^-$ at this level, determined by time-of-flight (ToF) analysis, was 99 \%, with an intensity of 1.5 $\times$ 10$^5$ per spill.
+The momentum resolution of the beamline spectrometer is (2.0 $\pm$ 0.5) $\times$ 10$^{-3}$ with an absolute precision of 2~MeV/$c$ at 1~GeV/$c$.
+A more detailed description can be found in \cite{ptep}. 
+
+ 
+\begin{figure}[!hbtp]
+\center\includegraphics[width=3.5in]{CDS3.eps}%
+\caption{ Schematic diagram of detectors in the CDS and of the target system \cite{ptep}. }
+\label{brdet}
+\end{figure} 
+
+ Figure \ref{brdet} shows a schematic diagram of the setup around the $^3$He target. A cylindrical target cell, 137 mm long and 68 mm in diameter, filled with liquid $^3$He, was
+ placed at the final focus of the beam line. The density of the target was 0.081 g/cm$^3$ at a temperature of 1.4 K. Details of the target system are given in \cite{3hetarget}. 
+To detect particles incident on the target, a small scintillator (DEF) was placed  in front of the target cell.
+%The beam tracks are reconstructed by a drift chamber (BPC) installed just upstream of the DEF.
+The reconstructed beam track from the K1.8BR beam line spectrometer was finally connected to the hit point on
+a drift chamber (BPC), installed just upstream of the DEF, to improve reconstructed vertex resolution.
+To measure the $K^-$ reaction products, the $^3$He target was surrounded by    
+%Secondary particles emitted by the $K^-$ reaction on $^3$He are detected by   
+a cylindrical detector system (CDS), consisting of a Cylindrical Drift Chamber (CDC) and a Cylindrical Detector Hodoscope (CDH) operating in a uniform $\sim$ 0.7~T magnetic field.
+The secondary particle tracks are reconstructed by the CDC using a helix fitting method, and their momenta are measured. Energy loss of each track, where major loss is mainly in the target region, was evaluated and corrected by the Runge-Kutta method. The transverse
+momentum resolution ($\sigma_{P_t}$) is found to be 5.3 \% $P_t$ $\oplus $ 0.5 \% $/\beta$ , where $P_t$ and $\beta$ are the transverse momentum in GeV/$c$ and the velocity of the charged particle, respectively.
+Particle identification (PID) was performed based on the ToF between incoming kaon timing and the CDH. Details of the CDS detectors are also described in \cite{ptep}.
+
+The data acquisition (DAQ) trigger signal was generated by a kaon in the beamline spectrometer, a hit on the DEF counter, and two or more charged-particle hits in the CDH.  
+The trigger rate was typically $\sim$ $10^3 $ per spill with a DAQ live time of $\sim$80 \%. 
+During the May 2013 run period of $\sim$ 90 hours,  data corresponding to 3.4 $\times$ 10$^9$ effective kaons on the $^3$He target were accumulated and used in the following analysis.
+
+
+
+
+
+\section{Analysis}\label{ana}
+The $\Lambda p n$ final state was identified by establishing that the $\pi^- p$ pair came from the $\Lambda$  decay following detection of two protons and one negative pion in the CDS. The missing neutron was identified kinematically.
+To reconstruct the $\Lambda p$ tracks in the CDS, precise PID was performed  based on a mass calculation using the momentum of the reconstructed track along with the CDH-based ToF information. 
+Energy loss corrections based on properties of the inner CDC materials yielded improved PID functions and permitted more accurate momentum reconstructions at the reaction vertex.
+The calculated mass-squared is shown as a function of momentum in Fig.~\ref{PIDwline}.
+The mass-squared distribution was sliced into momentum regions and fitted with Gauss functions for each particle species. The standard deviation was used for the PID function of each particle.
+The cuts defining protons, kaons and pions, shown as lines on Fig. \ref{PIDwline}, were set to 2.5 times the sigma of the respective mass-squared distributions. 
+To avoid misidentification, regions of overlap were excluded, resulting in an estimated purity of 99.5 \% for protons and pions. 
+ 
+\begin{figure}[!hbtp]
+\centering\includegraphics[width=3.5in]{PIDwline.eps}%
+\caption{ PID distribution of the CDS. The cut region for each particle is defined as 2.5 $\sigma $. Overlapped regions are excluded.  }
+\label{PIDwline}
+\end{figure}
+
+To identify the $\pi^- p$ pair associated with a specific $\Lambda$ decay in a $\pi^- pp$ event, a Log-likelihood method was used on the product of five probability density functions: 
+%To identify event with $\Lambda$ and proton in the final state, one pion and two protons reconstructed event are selected.  
+%Next procedure was to identify the correct $\pi^- p$ pair from a $\Lambda$ decay in the $\pi^- pp $ events. To maximize the identification efficiency, a Log-likelihood method is used.
+%The correct pairs were selected by using a product of probability density functions. For that, The following four quantities were evaluated ;
+(1)  distance of closest approach (DCA) between a $\pi ^- p$ pair candidate for $\Lambda$ decay ($f_{DCA(\pi p)}$), (2) DCA between the kaon beam and an un-paired proton ($f_{DCA(K^- p)}$), (3) DCA between the kaon beam  and a reconstructed $\Lambda$ track ($f_{DCA(K^- \Lambda)}$), (4) DCA between the un-paired proton and the reconstructed $\Lambda$ track on the kaon beam ($f_{DCA(\Lambda p)}$),  and (5) invariant mass distribution of the $\pi ^- p $ pair candidate ($f_{M_{inv.\pi^- p}}$).
+%One can calculated the relative probability to obtain an event according to the relative yield of distributions on these four quantities based on a simulation, in which we assume 
+%for $\Lambda pn$ final state equally distributed over the three body phase space by Monte Carlo simulation.
+Probability density functions were calculated based on the distributions of these five quantities for a simulated $\Lambda pn$ final state. In this simulation, we assume a flat distribution (S-wave) over the three-body phase space based on the phase volume, namely:
+\begin{equation}
+\label{3NALpn}
+\frac{d^{2}\sigma_{3\rm{NA}\left(\Lambda p n\right)}} {dT_{n}^{\,CM}d\cos\theta^{\,CM}_{n}}
+\propto \rho_{3} \left( \Lambda p n \right),
+\end{equation}
+where $\sigma_{3\rm{NA}\left(\Lambda p n\right)}$ is 
+the simulated event distribution for the $\Lambda p n$ final state, $T_{n}^{\,CM}$ is the kinetic energy of the neutron in the CM frame, and $ \cos\theta^{\,CM}_{n} $ is the neutron emission angle in the CM frame.
+GEANT4 \cite{geant4} is utilized to take into account geometrical information for all detectors and their resolution for all simulations.
+%The plain wave approximation is employed to generate the final state particles $\Lambda pn$, distribution
+%for the final state particles $\Lambda pn$ are scattered equally in phase space.
+
+Using the distribution functions given above, the log likelihood function (${\rm ln}L$) is defined as:
+\begin{equation}
+  {\rm ln}L = -{\rm ln}( f_{DCA(\pi p)} \times  f_{DCA(K^- p)}  \times  f_{DCA(K^- \Lambda)}  \times  f_{DCA(\Lambda p)} \times  f_{M_{inv.\pi ^- p}} ).
+\end{equation} 
+${\rm ln}L$ distributions for MC simulations as well as for data are shown in Fig. \ref{logprob}.
+The pairs having smaller ${\rm ln}L $ were chosen as the correct $\pi ^- p$ pair from $\Lambda$ decay; events with ${\rm ln}L > 6$ were rejected. 
+Based on our simulation, the incorrect $\pi^- p$ pair selection probability is estimated to be less than 0.5 \% of the total simulated events.
+%It should be noted that the present criteria to utilize ${\rm ln}L $ function is valid for $\Lambda p n$ three body final state, and could be less effective for other reaction channel, although the effect would be very small.
+Although utilization of the ${\rm ln}L $ function is valid for the $\Lambda p n$ three body state, it would be somewhat less effective for other reaction channels.
+
+
+\begin{figure}[!hbtp]
+\centering\includegraphics[width=3.5in]{logprob.eps}
+\caption{ Likelihood function (${\rm ln}L$) distribution. Black crosses are ${\rm ln}L$ of data. Since there are two possible pairs, the pair having smaller ${\rm ln}L$ is plotted. The red histogram shows the simulated ${\rm ln}L$ of the correct $p \pi^- $ pair from $\Lambda $ decay in a $pp \pi^-$ event. The blue histogram is ${\rm ln}L$ of the incorrect pair of $p \pi^- $ in a $\Lambda $ decay. The blue histogram is vertically scaled 10 times.   }
+\label{logprob}
+\end{figure}
+
+The reaction vertex was defined to be at the center of vertex($K\Lambda $) and vertex($Kp$), where vertex($K\Lambda $) is the closest approach point of the kaon and $\Lambda$ tracks on the kaon track, and vertex($Kp$) that of kaon and proton tracks on the kaon track.
+The vertex was constrained to lie within the fiducial volume of the target, 30 mm in radius and 100 mm long. The contamination from reactions on the material in the target cell is estimated to be less than 2 \% of events in the fiducial volume from the empty-target data. Furthermore, by focusing on the final state $\Lambda p n$, it becomes negligible because of kinematical conservation.
+
+%This simulation also gives us $\Lambda p$ pair detection efficiency of the CDS over the $\Lambda pn$ final state.
+%The result is shown in Fig. \ref{acc}(a) as Dalitz plot with kinetic energy of $\Lambda $, proton and neutron in CM frame, normalized to the $Q$-value of the reaction.
+%Figure \ref{acc}(a) shows that our detector system has a fairly flat acceptance over the $\Lambda pn$ phase space, expecting for upper-left and upper-right corners. Acceptance reduction of these corners come from lower kinetic energy of $p $ and $\Lambda $, so that we cannot detect them. On the other hand, we have enough acceptance at the bottom, where two-nucleons kaon absorption with a spectator neutron $n_s$, $K^- + ^3$He$\rightarrow \Lambda p + n_s$, is expected. Thus, we can easily detect this channel if it is a dominant process.
+%Figure \ref{acc}(b) shows the acceptance depending on the neutron emission angle. 
+%As shown in the figure, we are relatively sensitive to the forward neutron emission, due to the Lorentz boost and the CDS coverage.
+ 
+
+% \begin{figure}[!hbtp]
+%\centering\includegraphics[width=5.0in]{accall.eps} 
+%\caption{ (a) $\Lambda pn$ acceptance on Dalitz plot. The 2NA process, $K^- + ^3$He$\rightarrow \Lambda p n_s$ events are expected in the region marked by the orange circle.  (b) Acceptance of $\cos \theta_n $ in 3NA $\Lambda $pn process. $\theta = 0 $ is the beam direction in the CM frame.  }
+%\label{acc}
+%\end{figure}
+
+
+
+
+\section{Results}
+Previous reports of an S=-1 di-baryonic state (so-called ``$\bar{K}NN$" state ) were based on  $\Lambda p $ invariant mass spectra \cite{finuda,disto}.
+The present  $\Lambda p $ invariant mass spectrum, based on the above analysis, is shown in Fig. \ref{inLpall}(a). 
+There are many channels having the $\Lambda p$ in the final state. 
+To focus on the $\Lambda p n $ final state, the missing mass of the $ ^3{\rm He}(K^-, \Lambda p) X_{miss.}$ reaction was calculated  kinematically. A neutron peak is clearly seen as shown in Fig. \ref{inLpall}(b).
+%Inclusive invariant mass and missing mass using reconstructed $\Lambda p$ pairs are shown in Figure~\ref{inLpall}. 
+The resolution of the $\Lambda$p invariant mass $M_{inv.\Lambda p}$, and of the missing mass $M(X_{miss.})$ were
+~10 MeV at $M_{inv.\Lambda p}$ $\sim$ 2.37 GeV/$c^2$ and ~40 MeV at $M(X_{miss.})$ $\sim$ 0.94 GeV/$c^2$, respectively.
+To estimate the purity of our $\Lambda p n$ event selection, we applied a ``multi-channel global fit''  simultaneously to the $\Lambda p$ invariant mass and the missing mass spectra, with simulated physics processes which might contribute to these two spectra, 
+namely multi-nucleon kaon absorption with
+%one nucleon absorption followed final state interaction of pion and spectator nucleons( $i.e$. $KN \rightarrow Y \pi^0$ followed $\pi ^0 N_s N_s \rightarrow pn$) and 
+ multi-pion emission. 
+We denoted each process as 2NA($YNN_s+ \#n\pi$) and 3NA($YNN+ \#n\pi$), where $Y$ is a $\Lambda $ or $\Sigma ^0$, $N$ is a nucleon, $N_s$ is a spectator nucleon, and $\#n$ is  the number of pions. For simplicity, we haven't taken into account for the final state interaction. 
+In this simulation, we assumed that particles in the final state are distributed proportionally to the phase space volume in the same way as given in Eq. \ref{3NALpn}.
+\begin{equation}
+\label{simgene}
+\frac{d^{2}\sigma_{\left( YNN +\#n\pi \right)}} {dT_{n}^{\,CM}d\cos\theta^{\,CM}_{n}}
+\propto \rho_{3+\#n} \left( YNN +\#n\pi \right).
+\end{equation}
+ If there is a spectator nucleon, the Fermi momentum distribution is considered to reproduce the $^3$He($e,e'p$) result \cite{fermi}. 
+The generated events were converted to the event data format, and examined with the same analysis routine applied for the real data.
+A list of physics processes, taken into account for the global fit, is shown in  Table \ref{table_proc},
+together with the relative yields obtained for each process to the number of obtained events. %and each values of ratio are written in table 
+The fit results are given as histograms in Fig. \ref{inLpall}, and the two spectra are well described by the processes listed in Table \ref{table_proc}. $\chi ^2$ and DOF of the fit are 122 and 147, respectively. 
+%As seen in Fig. \ref{inLpall}(b), we are able to identify $ {\rm{}^3He}(K^-,\Lambda p)n$ events by selecting neutron in missing mass spectra.
+Figure \ref{inLpall}(c) shows a close up view in the missing neutron region. As shown in the figure, the $\Lambda pn$ final state events can be selected by setting the neutron window to be $0.85 < M(X_{miss.}) <1.03$ [GeV/$c^2$]. 
+For simplicity, we denote those events in the neutron window as ``$\Lambda p n $ events".
+%By this window, we can select most of the 3NA($\Lambda pn$) events, but we are also partially sensitive to 3NA($\Sigma ^0 pn$). 
+This close up view also indicates that the fit result of the relative $\Lambda p n $ yield  is weaker than the data (about 83 \% compared to data). It implies that there could be an unidentified channel which contributes to the yield of the $\Lambda p n $ final state, other than 3NA($\Lambda p n $) as discussed later. From the global fit,
+it is expected that three channels, 3NA($\Lambda p n $), 3NA($\Sigma^0 p n $), and 2NA($\Lambda p n_s $), will remain in the neutron window ($n$-window) at the ratio of 0.62 : 0.20  : 0.01, compared with the data in the $n$-window.
+%Some two step reactions ($i.e. $ $\Sigma \Lambda $ conversion, $K^- +NN \rightarrow \Sigma N$ followed $\Sigma N_s \rightarrow \Lambda N$) go to $\Lambda pn $ final state. However these complicated reaction mechanism was excluded in this analysis to simplify the discussion and because of rather small relative yields of $2NA$ processes which is included in such two step reactions.
+
+
+
+\begin{table}[!ht]
+\caption{Relative yield of each component to the number of obtained events.in the global fit, normalized to that of data (same for each component in the $n$-window normalized by the yield of data in the $n$-window). 
+%The relative yield below $10^{-4}$ in ``all" and  below $0.01$ in ``$n$-window" are marked as $NA$.
+Note that the spectral shapes of some reaction channels are quite similar, especially for the channels given in a row.}%%%Table caption goes here
+\label{table_proc}
+\centering
+\begin{tabular}{|c|c|c| |c|c|c|}%%%The number of columns has to be defined here
+\hline
+process & \multicolumn{2}{c||}{relative yield} & process & \multicolumn{2}{c|}{relative yield} \\ %%%% Table bod
+\hline
+ & all & $n$-window & & all & $n$-window \\     
+\hline
+\hline
+%1NA+FSI $(\Lambda pn)$ & $ 0.041  $ & 3NA ($\Lambda p n  $)   & $ 0.041 $\\ %%%% Table body
+%\hline
+%1NA+FSI $(\Sigma ^0 pn)$ & $ 1.6 \times 10^{-8} $  & 3NA ($\Lambda p n + \pi $) & $ 0.20 $\\ %%%% Table body
+%\hline
+2NA ($\Lambda pn_{s})$ & $ 0.001$  &  0.01 & 2NA ($\Sigma ^0 p n_{s}  $) & $<10^{-4}$ &  $<10^{-2}$ \\ %%%% Table body
+\hline
+2NA ($\Lambda p  n_{s} + \pi $) & $<10^{-4}$ &  $<10^{-2}$ & 2NA ($\Sigma ^0 p n_s + \pi $) & 0.010  &  $<10^{-2}$ \\ %%%% Table body
+\hline
+3NA ($\Lambda p n  $) & $0.072 $  & 0.62 & 3NA  ($\Sigma ^0 p n$) & $ 0.058 $  & 0.20\\ %%%% Table body
+\hline
+3NA ($\Lambda  p n + \pi $) & $ 0.199 $  &  $<10^{-2}$ & 3NA ($\Sigma ^0 p n + \pi $) & $ 0.239 $  &  $<10^{-2}$\\ %%%% Table body
+\hline
+3NA ($\Lambda  p n + 2\pi $) & $<10^{-4}$ &  $<10^{-2}$ & 3NA ($\Sigma ^0 p n + 2\pi $) & $ 0.354 $ &  $<10^{-2}$\\
+\hline
+3NA ($\Lambda  p n + 3\pi $) & $ 0.039 $ &  $<10^{-2}$ & 3NA ($\Sigma ^0 p n+ 3\pi $) & $<10^{-4}$ &  $<10^{-2}$\\
+ %%%% Table body
+%\hline
+%\hline
+%fit total & 0.97 & 0.83  & data total & 1.0 & 1.0 \\
+\hline
+\end{tabular}
+\end{table}%%%End of the table
+
+\begin{figure}[!hbtp]
+\centering\includegraphics[width=5.5in]{inLpIM_MM.eps}%
+\caption{Inclusive spectra of the $ {\rm{}^3He}(K^-,\Lambda p)$ reaction and the global fit result of simulation with multi-nucleon absorption processes.  (a) $\Lambda p$  invariant mass distribution. (b) missing mass $M(X_{miss.})$ spectra of $ {\rm{}^3He}(K^-,\Lambda p)X_{miss.}$ and (c) the close up view of (b) around the missing neutron region. In Figure (c), 2NA$(\Lambda pn_s)$ is vertically scaled 20 times. The dashed vertical lines in (c) show $n$-window selection. }
+\label{inLpall}
+\end{figure}
+
+The $\Lambda p n$ event distribution, over the phase space in the CM frame, is shown in 
+Fig. \ref{dalitz}(a), as a Dalitz plot with kinetic energies of $\Lambda $, proton and neutron, normalized by  the $Q$-value of the reaction. 
+And for reference,  the detection efficiency of the CDS is plotted in Fig. \ref{dalitz}(b).
+It shows that our detector system has a fairly flat acceptance over the $\Lambda pn$ phase space, except for the upper-left and the upper-right corners. Acceptance reduction of these corners comes from a lower kinetic energy of the $p $ and $\Lambda $ (below the detection threshold). There is, however, sufficient  acceptance at the bottom, where two-nucleon kaon absorption with a spectator neutron $n_s$, $K^- + ^3$He$\rightarrow \Lambda p + n_s$, is expected.
+
+The data events in Fig. \ref{dalitz}(a) are widely distributed over the kinematically allowed region, which is consistent with the global fit showing that the major component is coming from the three nucleon absorption process.
+In the Dalitz plot, an event concentration was observed at a normalized neutron kinetic energy $T_n^{CM} / Q^{CM} \approx 0.4$, which indicates that the $\Lambda p$ invariant mass will have a structure corresponding to that energy. 
+
+\begin{figure}[!hbtp]
+\centering\includegraphics[width=5.0in]{dalitz.eps}
+
+\caption{(a)Dalitz plot of the selected $\Lambda p n$ events in the CM frame. (b) The simulated detector acceptance in a Dalitz plot.   }
+\label{dalitz}
+\end{figure}
+
+
+Distribution of the $\Lambda p$ invariant mass and the calculated neutron emission-angle are shown in  Fig. \ref{datawokpp}(b) and (c), and the scatter plot of the two is given in Fig. \ref{datawokpp}(a).  
+As indicated in the Dalitz plot, an unexpected peak structure is seen at $M_{\Lambda p} \sim M(K^-+p+p)$ in the $\Lambda p$ invariant mass spectrum, where the global fit is insensitive. 
+
+As shown in Fig. 6(c), the neutrons in this peak structure are clearly concentrated at the forward region, where the momentum transfer to the $\Lambda p$ system is minimum,  
+while the wide distribution can be explained by the multi-nucleon
+absorption processes given by the global fit in the $n$-window.
+%A $\chi^2$ comparative test was made in  the $\Lambda p$ invariant mass and neutron emission-angle spectra. 
+The values obtained for $\chi ^2$ / DOF in Fig. \ref{datawokpp}(b) and (c) are 135 / 43, and 138 / 76, respectively.
+This $\chi^2$ test result indicates that the observed peak structure could not be explained by multi-nucleon absorption processes.  
+\begin{figure}[!hbtp]
+\centering\includegraphics[width=5.0in]{wokpp.eps}
+%%%call your 
+%\subfloat[]{\includegraphics[width=2.5in]{fitkpp_b0_w0_D27.eps}
+%%%call your figure name in the place "figurename.eps"
+%\label{IMwokpp}}
+%\hfil
+%\subfloat[]{\includegraphics[width=2.5in]{fitcos_b0_w0_D27.eps}
+%%%call your figure name in the place "figurename.eps"
+%\label{cosn}}
+\caption{(a) 2-D distribution of the $\Lambda p$ invariant-mass and the emission-angle of the missing neutron. The blue dashed lines show crude CDS acceptance boundary for the $\Lambda p n$ events.
+(b) $\Lambda p$ invariant mass with simulated spectra obtained by the global fit in the neutron window.  (c) Angular distribution of the missing neutron, kinematically reconstructed, as a function of $\cos \theta_n^{CM}$. The histograms show the contributions of the three remaining channels in $n$-window, whose yields are given by the global fit.}
+\label{datawokpp}
+\end{figure}
+
+\section{Discussion}
+To explain the excess,
+the existence of a simple finite-size S-wave single-pole structure over the three-body phase space which decays to $\Lambda p$ in the final state is assumed. Thus the formation cross-section ($\sigma_X$) of the pole can be written as:
+\begin{equation} \label{pole} 
+ \frac{d^2 \sigma _X}{dM_{inv.\Lambda p}dq_{\Lambda p}} \propto \rho _{3}(\Lambda p n) \times \frac{(\Gamma _X/2)^2}{(M_{inv.\Lambda p}-M_{X})^2 + (\Gamma _{X} /2)^2 } \times  | \exp{(-q_{\Lambda p}^2/2Q_{X}^2)}|^2 ,
+\end{equation} 
+where $M_{inv.\Lambda p}$ is the invariant mass of $\Lambda p$, $q_{\Lambda p}$ is the momentum transfer of the reaction ($q_{\Lambda p}\ =\ |{\bf p}_\Lambda + {\bf p} _{p} | $),  $M_X$ is the energy, $\Gamma_X$ is the decay-width, and $Q_X$ is the form factor parameter of the pole. 
+ The first term in the formula is the three-body Lorentz-invariant phase space of $\Lambda p n$, the second  the Breit-Wigner formula, and the third the square of the form-factor, which can also be interpreted as the sticking probability of a plain-wave having $q_{\Lambda p}$ to a harmonic oscillator having finite size $\approx \hbar / Q_X$. 
+
+
+We generated events according to Eq. \ref{pole} in the simulation.  A $\chi^2$ comparative test was made  between the experimental data  and the simulated pole together with the multi-nucleon absorption processes. 
+%Parameters for pole structure, $M_X$, $\Gamma_X$ and $Q_X$, are evaluated iteratively. 
+Thus, we fitted the spectra keeping the yield of 3NA($\Lambda p n$) as a free parameter, because  we introduced a new pole, which decays to the $\Lambda p$ final state.  The other two yields for 3NA($\Sigma^0 p n$) and 2NA($\Lambda p n_s$) are fixed as they are given by the global fit.
+We first assumed  $Q_{X}= \infty $ and 
+made a two-dimensional $\chi^2$ map on the $M_X$ and $\Gamma_X$ plane to define the minimum $\chi^2$ for the  invariant mass spectra.
+% to deduce $M_X$ and $\Gamma_X$, for first iteration.
+Then, $Q_{X}$ is chosen to have minimum $\chi^2$ for the momentum transfer distribution, at a given $M_X$ and $\Gamma_X$. This process was iterated until the parameters converged. 
+The two-dimensional $\chi^2$  map as a function of the $M_X$ and $\Gamma _X$ is shown in Fig.~\ref{fitresult1}(a). Figure~\ref{fitresult1}(b) plots $\chi ^2$ as a function of momentum transfer.  
+The minimum $\chi ^2$ point is at $M_X =$ 2355 $ ^{+ 6} _{ - 8}$ (stat.) $\pm $ 12 (syst.)  MeV/$c^2$,  $\Gamma _X =$ 110 $ ^{+ 19} _{ - 17}$ (stat.) $\pm $ 27 (syst.) MeV/$c^2$, and $Q_X  = 400$ $^{+60}_{-40} $  (stat.) MeV/$c$. 
+The statistical error is defined  as the $\chi ^2_{min.}+1$ contour. 
+The systematic uncertainties are evaluated by considering the magnetic field strength in the CDS, the likelihood threshold to select the $\Lambda p$ pair, and binning of the invariant mass spectra.
+The fit results are shown in Fig. \ref{fitresult2}. Because we simply assumed that the forward neutron emission is due to the form factor as it is given in Eq. \ref{pole}, we re-plotted Fig. \ref{datawokpp} in terms of $q_{\Lambda p}$ instead of $\cos \theta _n ^{CM}$. 
+The values obtained for $\chi ^2$ / DOF in Fig. \ref{fitresult2}(b) and (c) are 68 / 45, and 23 / 27, respectively. 
+
+To obtain the cross section, one needs to know the detailed event distribution and the acceptance. 
+If we assume that all the angular distributions can be given by the fit results, 
+the acceptance correction can be applied under this assumption. The cross sections can be evaluated as;  pole : 7 $\pm 1 $ $\mu $b, 3NA($\Lambda pn$) : 17 $\pm2 $ $\mu $b, and 2NA($\Lambda p n_s$) : 0.8 $ ^{+2.7} _{-0.8} $ $\mu $b. If we rely on the global fit and event distribution outside of the neutron window, then we can also determine the 3NA($\Sigma ^0 pn$) cross section to be 28 $\pm5 $ $\mu $b in total. The errors are the quadratic sum of the statistical and the systematic ones, where the systematic uncertainty mainly arises from the target-$^3$He and beam-kaon yields. 
+
+There could be many interpretations for the pole found in the $\Lambda p$ invariant mass distribution in the $^3$He$(K^-, \Lambda p)n_{miss.}$ reaction channel at $p_K = 1$ GeV/$c$, even if the simplest present assumption of Eq. \ref{pole} is valid. A na\"{\i}ve interpretation of the pole would be a $\bar{K}NN$ bound state, since the pole position is located below the $M(K^- + p + p)$ threshold of 2370 MeV/$c^2$.  It could also be a shallow bound or unbound resonance of the $Y^*p$ system, because  the $Y^*p$ threshold is located at 2343 MeV/$c^2$ (assuming $Y^*=\Lambda(1405)$ at 1405 MeV/$c^2$).  However, there is no clear discrimination between the two interpretations given above, if we assume $\Lambda(1405)$ to be a $K^-p$ bound state or penta-quark like structure. 
+ 
+The $Q_{X}$ of $\sim $ 400 MeV/$c$ is rather large compared to the Fermi-motion in light nuclei of about 100 MeV/$c$, and it implies a short interaction range of about 0.5 fm. Even if we take into account the core motion in the reaction, the effect is as small as about 20 \%\cite{harada}. 
+If we assume a P-wave pole resonance instead of S-wave, then the reaction with smaller $Q_X$, namely longer interaction range,  is preferred.
+%The fit shows that the assumption of S-wave resonance is  consistent to the data.
+%, but it is true that the assumption itself is too simple. 
+
+It should be noted that the pole position is close to the two threshold energies, $M(K^- + p + p)$ and $M(Y^*+p)$, thus the symmetric Breit-Wigner formula could be too simple. For example, the $\bar{K}NN$-decay channel opens at the $K^- pp$ threshold, so the spectral function observed in the $\Lambda p$-decay channel could be suppressed above the corresponding thresholds.
+% For the simplicity, we have not introduced all other sophisticated assumption, like interferences term between pole and multi-nucleon absorption channels, at the present limited statistics.   
+
+
+There might be a totally different approach to account for the peak structure.  One can expect a peak-like structure by assuming $Y^* N \rightarrow  \Lambda N$ conversion, after the quasi-free $Y^*$ production by the two nucleon reaction, namely the 2NA($Y^* n p_s$) reaction followed by $Y^* p_s \rightarrow \Lambda p$ in our notation ($Y^* = \Lambda(1405)$ or $\Sigma(1385)$).  In this case, the peak position naturally depends on the momentum transfer  as $M_X(q_{\Lambda p})$ (or $\cos \theta_n^{CM}$). Although the statistics is limited, there is no clear hint of momentum dependence of the peak structure as shown both in Fig. \ref{datawokpp} and Fig. \ref{fitresult2}.
+
+
+%\begin{figure}[!hbtp]
+%\center\includegraphics[width=5.0in]{discs_fit.eps}
+%\caption{(a) two dimensional $\chi ^2$ map of mass and width of single-pole structure.  (b) $\chi ^2$ distribution of $Q_X$. (c) the best fit of $\Lambda $p invariant mass spectrum. (d) distribution of momentum transfer to $\Lambda p$ and best fit result of simulation.}
+%\label{fitresult}
+%\end{figure}
+
+
+
+\begin{figure}[!hbtp]
+\center\includegraphics[width=5.0in]{discs_chi.eps}
+\caption{(a) two dimensional $\chi ^2$ map of mass and width of pole structure.  (b) $\chi ^2$ distribution of $Q_X$. }
+\label{fitresult1}
+\end{figure}
+
+
+\begin{figure}[!hbtp]
+\center\includegraphics[width=5.5in]{discs_data.eps}
+\caption{(a) 2-D distribution of the $\Lambda p$ invariant mass and the momentum transfer to $\Lambda p$.  (b) the fit result of the $\Lambda $p invariant mass spectrum. (c) distribution of the momentum transfer to $\Lambda p$ and the fit results of simulation.}
+\label{fitresult2}
+\end{figure}
+
+
+
+
+
+
+
+  
+
+
+
+\section{Conclusion}
+%%
+The  $^3$He($K^{-}$,$\Lambda p )n_{miss.}$ reaction has
+been studied  with an incident $K^-$ momentum of 1.0 GeV/$c$ for the first time. 
+We found that 17 $\pm2 $ $\mu $b of the $\Lambda p$ events in the neutron window can be explained by a three-nucleon absorption channel, 3NA$(\Lambda pn)$ uniformly spread over the kinamatical limit, proportional to the phase space, and without any spectator nucleon.
+The existence of this channel is already quite interesting, because it seems to follow simple phase space, so that the reaction is ``point-like" as in Eq. \ref{3NALpn}.  
+ In contrast, absorption by two-nucleons is rather weak compared to three-nucleons. The ratio of 2NA($\Lambda pn_s$)/ 3NA($\Lambda pn$) is found to be 0.05 or less. 
+
+%In the selected events, contamination from other 3NA channel, 3NA$(\Sigma^0 pn)$. The cross section for 3NA$(\Sigma^0 pn)$ is estimated to be 28 $\pm5 $ $\mu $b.
+%It was found the existence of multi-nucleon absorption of in-flight kaon, and suppression of K$^-$ absorption on two nucleons in the $\Lambda pn$  final state. The ratio of 2NA($\Lambda pn_s$)/ 3NA($\Lambda pn$) is found to be 0.05 or less. 
+
+Apart from the widely distributed 3NA process, a peak structure is observed in the $\Lambda p$ invariant mass around the $\bar{K}NN$ threshold in the low momentum-transfer region.
+The spectral shape has been examined assuming a single-pole existence whose final state is $\Lambda p$.
+Fit results show that the pole has $M_X=$  2355 $ ^{+ 6} _{ - 8}$ (stat.) $ \pm 12$ (syst.) MeV/$c^2$, $\Gamma _X=$  110 $ ^{+ 19} _{ - 17}$ (stat.) $ \pm 27$ (syst.) MeV/$c^2$, respectively, with a Gaussian form-factor parameter $Q_X=\ 400\ ^{+60}_{-40} $MeV/$c$, having a cross section of about 7 $\mu$b.
+The form factor parameter $Q_X \sim$ 400 MeV/$c$ implies that the range of interaction is about 0.5 fm.
+%On the other hand, we do not have enough statistics to discuss the spectral shape around deeply bound region.
+
+
+\ack
+%\section*{Acknowledgment}
+
+We gratefully acknowledge all the staff members at J-PARC for their invaluable contributions.
+We would like to thank Professor Toru Harada and Professor Yoshinori Akaishi for valuable comments and discussions.
+This work was supported by RIKEN, KEK, RCNP,
+a Grant-in-Aid for Scientific Research on Priority Areas
+[No. 17070005 and No. 20028011], a Grant-in-Aid for
+Specially Promoted Research [No. 20002003], a Grant-
+in-Aid for Young Scientists (Start-up) [No. 20840047],
+a Grant-in-Aid for Scientific Research on Innovative Areas [No. 21105003], a Grant-in-Aid for JSPS Fellows
+[No. 12J10213], and the Austrian Science Fund (FWF)
+[21457-N16].
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+
+%\bibliographystyle{ptephy}
+%\bibliography{sample}
+%
+% once the .bbl file has been generated then place the text in your article.
+
+
+\begin{thebibliography}{30}
+
+%\bibitem{jaffe} R. L. Jaffe, Phys. Rev. Lett. \textbf{38}, 195 (1977).
+%\bibitem{lqcd_b} S. R. Beane, E. Chang, W. Detmold, B. Joo, H. W. Lin, T. C. Luu, K. Orginos, A. Parreno, M. J. Savage, A. Torok, and A. Walker-Loud, Phys. Rev. Lett. \textbf{106}, 162001 (2011).
+%\bibitem{lqcd_i} T. Inoue, N. Ishii, S. Aoki, T. Doi, T. Hatsuda, Y. Ikeda, K. Murano, H. Nemura, and K. Sasaki, Phys. Rev. Lett. \textbf{106}, 162002 (2011).
+
+%\bibitem{belle} B. H. Kim $et\ al$., Phys. Rev. Lett. \textbf{110}, 222002 (2013).
+%\bibitem{e42} J. K. Ahn, K. Imai (E42 collaboration)., J-PARC E42 proposal.\\ http://j-parc.jp/researcher/Hadron/en/pac$\_$1201/pdf/KEK$\_$J-PARC-PAC2011-06.pdf
+%\bibitem{cosy} P. Adlearson $et\ al$.,  Phys. Rev. Lett. \textbf{106}, 242302 (2011).
+\bibitem{lowsca} A. D. Martin, Nucl. Phys. B \textbf{179} 33 (1981).
+\bibitem{katom} M. Bazzi $et\ al$., Phys. Lett. B  \textbf{704}, 113 (2011)
+
+\bibitem{AY1} Y. Akaishi and T. Yamazaki, Phys. Rev. C \textbf{65}, 044005 (2002).
+\bibitem{AY2} T. Yamazaki and Y. Akaishi, Phys. Lett. B \textbf{535}, 70 (2002).
+
+\bibitem{t0} Y. Ikeda, and T. Sato, Phy. Rev. C \textbf{79}, 035201 (2009).
+\bibitem{t1} N. V. Shevchenko, A. Gal, and J. Mare$\acute{s}$  Phys. Rev. C \textbf{76}, 044004 (2007).
+\bibitem{t2} S. Wycech, and A. M. Green , Phys. Rev. C \textbf{79}, 014001 (2009).
+%\bibitem{t3} T. Yamazaki and Y. Akaishi, Phys. Rev. C \textbf{76}, 045201 (2007).
+%\bibitem{t3} D. Jido $et\ al$., Nucl. Phys. A \textbf{725}, 181 (2003).
+
+%\bibitem{t5} T. Hyodo and A. Weise, Phys. Rev. C \textbf{77}, 035204 (2008).
+%\bibitem{t7} T. Nishikawa and Y. Kondo, Phys. Rev. C \textbf{77}, 055202 (2008).
+\bibitem{t3} A. Dot$\acute {e}$, T. Hyodo, and W. Weise, Phys. Rev. C \textbf{79}, 014003 (2009).
+\bibitem{t4} Y. Ikeda, and T. Sato, Phys. Rev. C \textbf{79}, 035201 (2009).
+
+\bibitem{tin5} S. Maeda, Y. Akaishi, and T.Yamazaki, Proc. Jpn. Acard., Ser. B \textbf{89}, 418 (2013).
+
+%\bibitem{t8} M. Bayar, and E. Oset, Phys. Rev. C \textbf{88}, 044003 (2013).
+
+\bibitem{tin6} J. Revai, and N. V. Shevchenko, Phys. Rev. C \textbf{90}, 034004 (2014).
+
+
+\bibitem{te1} Y. Ikeda, H. Kamano, and T. Sato, prog. Theor. Phsy. \textbf{124} 533 (2010).
+
+\bibitem{te2} N. Barnea, A. Gal, and E. Z. Liverts, Phys. Lett. B \textbf{712} 132 (2012). 
+%\bibitem{t11} J. Yamagata-Sekihara $et\ al$., Phys. Rev. C \textbf{80}, 045204 (2009).
+%\bibitem{t12} T. Koike and T. Harada, Phys. Rev. C \textbf{80}, 055208 (2009).
+
+\bibitem{finuda} M. Agnello $et\ al$., Phys. Rev. Lett. \textbf{94}, 212303 (2005).
+\bibitem{disto} T. Yamazaki $et\ al$., Phys. Rev. Lett. \textbf{104}, 132502 (2010).
+\bibitem{e27} Y. Ichikawa $et\ al$., Prog. Theor. Exp. Phys. 021D01 (2015). 
+
+\bibitem{leps} A. O. Tokiyasu $et\ al$., Phys.Lett. B \textbf{728}, 616 (2014).
+\bibitem{hades} L. Fabbietti  $et\ al$., Nucl. Phys. A \textbf{914}, 60 (2013).
+%\bibitem{hades2} E. Epple and L. Fabbietti., Phys. Rev. C \textbf{92}, 044002 (2015).
+\bibitem{finuda2} O. V$\grave{a}$zquez $et\ al$., arXiv:nucl-ex/1511.04496.
+\bibitem{kloe} A. Filippi and S. Piano Hyperfine Interact \textbf{233}, 151 (2015). 
+\bibitem{hashimoto} T. Hashimoto(E15 collaboration).,  Prog. Theor. Exp. Phys.  061D01 (2015). 
+%\bibitem{p}  M. Iwasaki, T. Nagae (E15 collaboration)., J-PARC E15 proposal.\\
+%http://j-parc.jp/NuclPart/pac$\_$0606/pdf/p15-Iwasaki.pdf
+
+%\bibitem{finuda2} M. Agnello $et\ al$., (FINUDA Collaboration), Nucl. Phys. A \textbf{775}, 35 (2006).
+%\bibitem{abs1} C. Vander, Velde-Wilcquet $et\ al$., Il Nuovo Cimento \textbf{39A}, 538 (1977).
+%\bibitem{abs2} P. A. Katz, $et\ al$., Phys. Rev. D \textbf{1}, 1267 (1970). 21
+
+%\bibitem{pistop} D. Gotta $et\ al$., Phys. Rev C \textbf{51}, 469 (1995). 
+%\bibitem{pi_inflight1} P. Weber $et\ al$., Nucl. Phys. A \textbf{501}, 765-800 (1989).
+%\bibitem{pi_inflight2} G. Backenstoss $et\ al$., Phys. Rev. Lett. \textbf{55}, 2782 (1985).
+
+
+
+\bibitem{ptep} K. Agari $et\ al$., Prog. Theor. Exp. Phys.  02B011 (2012).
+\bibitem{3hetarget} M.Iio etal.,  Nucl. Inst. and Meth. A \textbf{687} 1 (2012).
+\bibitem{geant4} S. Agostinelli $et\ al$., (GEANT4 Collaboration), Nucl. Instrum. Meth. A \textbf{506}, 250 (2003).
+\bibitem{fermi} P. Barreau $et\ al$., Phys. Rev. Lett. \textbf{49}, 974 (1982).
+\bibitem{harada} T. Harada, Private communication (2016).
+%\bibitem{datasim} V. Flaminio $et\ al$., CERN-HERA \textbf{83-02} (1983).
+%\bibitem{stopk} O. V$\grave{a}$zquez $et\ al$., arXiv:nucl-ex/04496v1.
+%\bibitem{debye} P. Debye, Ann. Physik. \textbf{43}, 49 (1914)
+%\bibitem{pdg} K.A. Olive $et al$., (Particle Data Group), Chin. Phys. C \textbf{38} 090001 (2014).
+
+\end{thebibliography}
+
+
+
+\end{document}

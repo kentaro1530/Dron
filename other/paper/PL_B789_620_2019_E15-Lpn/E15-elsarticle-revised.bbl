@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Yukawa35}
+H.~Yukawa, Proc. Phys.-Math. Soc. Japan 17 (1935) 48.
+
+\bibitem{Geissel02}
+H.~Geissel, et~al., Phys. Lett. B 549 (2002) 64.
+
+\bibitem{Iwasaki97}
+M.~Iwasaki, et~al., Phys. Rev. Lett. 78 (1997) 3067.
+
+\bibitem{Beer}
+G.~Beer, et~al., Phys. Rev. Lett. 94 (2005) 212302.
+
+\bibitem{Bazzi}
+M.~Bazzi, et~al., Phys. Lett. B704 (2011) 113.
+
+\bibitem{Hall15}
+J.~M.~M. Hall, et~al., Phys. Rev. Lett. 114 (2015) 132002.
+
+\bibitem{AY1}
+Y.~Akaishi, T.~Yamazaki, Phys. Rev. C65 (2002) 044005.
+
+\bibitem{AY2}
+T.~Yamazaki, Y.~Akaishi, Phys. Lett. B535 (2002) 70.
+
+\bibitem{Gal}
+N.~V. Shevchenko, A.~Gal, J.~Mare\v{s}, Phys. Rev. Lett. 98 (2007) 082301.
+
+\bibitem{Weise}
+A.~Dote, T.~Hyodo, W.~Weise, Phys. Rev. C79 (2009) 014003.
+
+\bibitem{Oset}
+M.~Bayar, E.~Oset, Phys. Rev. C88 (2013) 044003.
+
+\bibitem{Dote}
+A.~Dote, T.~Inoue, T.~Myo, Phys. Rev. C95 (2017) 062201(R).
+
+\bibitem{finuda}
+M.~Agnello, et~al., Phys. Rev. Lett. 94 (2005) 212303.
+
+\bibitem{disto}
+T.~Yamazaki, et~al., Phys. Rev. Lett. 104 (2010) 132502.
+
+\bibitem{e27}
+Y.~Ichikawa, et~al., Prog. Theor. Exp. Phys. 2015 (2015) 021D01.
+
+\bibitem{hades}
+G.~Agakishiev, et~al., Phys. Lett. B742 (2015) 242.
+
+\bibitem{oton}
+O.~{Vazquez Doce}, et~al., Phys. Lett. B758 (2016) 134.
+
+\bibitem{Tanabashi:2018oca}
+M.~Tanabashi, et~al., Phys. Rev. D98 (2018) 030001.
+
+\bibitem{Sato}
+M.~Sato, et~al., Phys. Lett. B659 (2008) 107.
+
+\bibitem{Agari}
+K.~Agari, et~al., Prog. Theor. Exp. Phys. 2012 (2012) 02B011.
+
+\bibitem{hashimoto}
+T.~Hashimoto, et~al., Prog. Theor. Exp. Phys. 2015 (2015) 061D01.
+
+\bibitem{sada}
+Y.~Sada, et~al., Prog. Theor. Exp. Phys. 2016 (2016) 051D01.
+
+\bibitem{Sekihara}
+T.~Sekihara, E.~Oset, A.~Ramos, Prog. Theor. Exp. Phys. 2016 (2016) 123D03.
+
+\end{thebibliography}

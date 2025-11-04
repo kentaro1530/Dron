@@ -1,0 +1,97 @@
+\documentclass[11pt,a4book,openany,dvipdfmx]{book}
+
+\input{preset/package}
+\input{preset/title}
+
+\input{preset/tmp}
+
+\input{analysis/template_fitting/params}
+\input{discussion/fit_param}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction} \label{chapter:Introduction}
+\section{Discovery of the $\Lambda(1405)$} \label{sec:intro_discovery}
+% \input{intro/discovery}
+\section{$\bar{K}N$ interaction} \label{sec:KN_interaction}
+% \input{intro/KN_interaction}
+\section{Two pole strcture of the $\Lambda(1405)$}
+% \input{intro/two_pole}
+\section{Recent experimental status of the $\Lambda(1405)$}
+% \input{intro/recent_ex}
+\section{Recent theoritical status of the $\Lambda(1405)$} \label{sec:recent_theo}
+% \input{intro/recent_theo}
+\section{$d(K^-, n)$ reaction}
+% \input{intro/kd_reaction}
+\section{The J-PARC E31 experiment} \label{sec:E31}
+% \input{intro/E31}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Experimental
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Experimental setup} \label{chapter:setup}
+%% \input{experimental}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Analysis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Analysis} \label{chapter:analysis}
+%% \input{analysis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% pi Sigma Spectra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{$\pi \Sigma$ Spectra} \label{chapter:piSigma_spectra}
+\section{Decomposition of the $K^- d \rightarrow n \pi^+ \pi^- n$ events} \label{sec:npipin_decompose}
+\subsection{Backward $\pi^{\mp}\Sigma^{\pm}$ event selection} \label{sec:backward_piSigma}
+% \input{analysis/template_fitting/backward_piSigma_selection}
+\subsection{Template fitting} \label{sec:template_fitting}
+% \input{analysis/template_fitting/template_fitting}
+
+\section{Conversion to the cross section} \label{sec:conversion}
+\subsection{Acceptance correction} 
+% \input{analysis/conversion/acceptance}
+
+\subsection{Conversion factors for the cross section} 
+% \input{analysis/conversion/factor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Discussion & Conclusion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Discussion} \label{chapter:discussion}
+\section{Spectra}
+\subsection{Qualitative properties of obtained spectra}
+\input{discussion/spectra/obtained}
+\subsection{Comparison with theoritical calculations}
+\input{discussion/spectra/comp_theoritical_cacl}
+% \subsection{Comparison with DCC model}
+\input{discussion/spectra/comp_DCC}
+\subsection{$\bar{K}N$ Pole parameters assuming the 2-step reaction} \label{sec:assume_2step}
+% \input{discussion/spectra/asumme_2step_reaction}
+
+
+\chapter{Conclusion}
+% \input{conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\chapter{$\pi^0 \Sigma^0$ spectrum analysis} \label{sec:kawasaki_ana}
+
+\chapter{Detector resolution} \label{chapter:detector_resolution}
+\input{appendix/detector_resolution}
+\section{CDC resolution}
+\input{appendix/detector_resolution/CDS}
+\section{Detector resolution on the $d(K^-, N)$} \label{sec:NC_reso}
+
+\chapter{$d(K^-, n)K^0n$ analysis} \label{chapter:K0_ana}
+
+\input{reference}
+
+\end{document}

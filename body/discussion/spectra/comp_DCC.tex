@@ -1,0 +1,47 @@
+Here, the spectra are decomposed into the $I=0$, $I=1$, and interference components in order to clarify the contriutions of these factors.
+The obtained spectrum can be expressed as follows from the isospin relation.
+
+\newcommand{\Tmat}{T_{\bar{K}N \rightarrow \pi \Sigma}}
+\newcommand{\Cfirst}{C_{K^- N \rightarrow \bar{K}N}}
+\newcommand{\CS}{\frac{d\sigma}{d\Omega dM}}
+\begin{align}
+  \CS(\pi^\mp \Sigma^\pm) \propto & \left| \Cfirst^0 \Tmat^{I=0} \mp \Cfirst^1 \Tmat^{I=1} \right|^2 \nonumber \\
+  = & \left| \Cfirst^0 \Tmat^{I=0} \right|^2 + \left| \Cfirst^1 \Tmat^{I=1} \right|^2 \nonumber \\
+    & \mp 2\mbox{Re}( \Cfirst^0 \Cfirst^1 \Tmat^{I=0} \Tmat^{I=1} ) & \label{eq:Charge_piS} \\
+  \CS(\pi^- \Sigma^0) \propto & \left| \Cfirst^1 \Tmat^{I=1} \right|^2 \label{eq:pimS0}
+\end{align}
+
+Here, $\Tmat^{I=0,1}$ represents the $T$ matrix of the second $\bar{K}N \rightarrow \pi \Sigma$ scattering for isospin $I=0$ and $I=1$.
+Additionally, $\Cfirst^{0,1}$ denotes the factor for the first $K^- p \rightarrow \bar{K}N$ scattering,
+corresponding to the isospin $I=0$ and $I=1$ components of the second scattering.
+
+Since it can be expressed as shown in Equation (\ref{eq:Charge_piS}), (\ref{eq:pimS0}),
+the spectra corresponding to $I=0$, $I=1$, and their interference terms can be written as follows.
+\begin{align}
+   \CS(I=0) \propto & \frac{1}{2}\left( \CS(\pi^- \Sigma^+)+\CS(\pi^+ \Sigma^-)-\CS(\pi^-\Sigma^0) \right) \nonumber \\
+            = & \left| \Cfirst^0 \Tmat^{I=0} \right|^2 \label{eq:I0}\\
+   \CS(I=1) \propto & \CS(\pi^- \Sigma^0) \nonumber \\
+            = & \left| \Cfirst^1 \Tmat^{I=1} \right|^2 \label{eq:I1}\\
+   \CS(int) \propto & \left( \CS(\pi^- \Sigma^+)-\CS(\pi^+\Sigma^+) \right) \nonumber \\
+            = & 4\mbox{Re}( \Cfirst^0 \Cfirst^2 \Tmat^{I=0} \Tmat^{I=1} ) \label{eq:interfer}
+\end{align}
+
+The spectrum is transformed according to this formula.
+We introduce scaling parameters $S_{I=0}$ and $S_{I=1}$ to adjust the intensities of the $I=0$ and $I=1$ components,
+respectively, so that the overall spectral shape becomes more comparable to the theoretical spectrum.
+The interference terms are scaled by $\sqrt{S_{I=0}S_{I=1}}$, as described in Equation \ref{eq:interfer}.
+
+\input{discussion/spectra/figs/fit_scale}
+\input{discussion/spectra/table/DCC_poles}
+
+By fitting with these parameters, we obtain $S_{I=0} = \fitAscaleIz$ and $S_{I=1} = \fitAscaleIo$ for Model A,
+and $S_{I=0} = \fitBscaleIz$ and $S_{I=1} = \fitBscaleIo$ for Model B.
+The results of these fits are shown in the figure \ref{fig:fit_scale} : the left panel corresponds to Model A, and the right panel to Model B.
+The top subpanels show the spectra for the $I=0$ component, the middle ones for the $I=1$ component (i.e., the $\pi^-\Sigma^0$ spectrum),
+and the bottom ones for the interference term.
+
+
+
+\input{discussion/spectra/figs/fit_B_phase_fixI1}
+\input{discussion/spectra/figs/fit_B_phase}
+

@@ -1,0 +1,37 @@
+\input{analysis/template_fitting/figs/kd_npipin_type}
+
+The $K^- n \rightarrow n \pi^+ \pi^- n$ final state is identified from the event in which the forward neutron is detected,
+as described in Section.\ref{sec:???}.
+This final state can be considered to include the three reactions represented in Figure \ref{fig:kd_npipin_type}.
+The first is the signal reaction in this analysis where $\bar{K}$ is recoiled backward to $\pi \Sigma$
+as shown in Figure.\ref{fig:kd_npipin_type}-(a),
+the second is the recoil of $K^0$ decaying directly to $\pi^+ \pi^-$ as shown in Figure \ref{fig:kd_npipin_type}-(b),
+and the third is the forward production of $\Sigma$ ($\Sigma_{forward}$) as shown in Figure \ref{fig:kd_npipin_type}-(c),
+where forward means that the $n$ decaying from $\Sigma$ are detected by the NC.
+Reactions (b) and (c) can be identified by reconstructing $K^0$ and $\Sigma^{\pm}$
+from the invariant masses of $\pi^+$ and $\pi^-$ and forward neutrons and $\pi^{\pm}$, respectively,
+as shown in Figure.\ref{fig:npipin_IM_fitGauss}.
+The invariant mass distributions of $\pi^+ \pi^-$, $n \pi^-$ and $n \pi^+$ are represented in the right, center and left figures respectively.
+For the identification of $K^0$ and $\Sigma^{\pm}_{forward}$,
+fitting with third-order polynomial function and Gaussian function is used to identify $K^0$ and $\Sigma^{\pm}_{forward}$
+in the 3$\sigma$ region of the Gaussian function, which is indicated by the red hatched area.
+
+\input{analysis/template_fitting/figs/npipin_IM_fitGauss}
+
+Rejecting these two reactions leaves a signal reaction in which $\pi \Sigma$ is scattered backward.
+This reaction has $\pi^- \Sigma^+$ and $\pi^+ \Sigma^-$ modes, and they must be separated.
+The branching ratio of these modes depends on the mass of $\pi \Sigma$, and this separation is performed for each bin of $d(K^-, n)$ missing mass.
+
+\input{analysis/template_fitting/figs/KN_MM}
+
+Figure \ref{fig:KN_MM_npipin} shows the $d(K^-, n)$ missing masses in which the $K^- d \rightarrow n \pi^+ \pi^- n$ final state has been identified.
+On the left, all events, those identifying $K^0$, those identifying $\Sigma^+_{forward}$, and those identifying $\Sigma^-_{forward}$
+are indicated by black, green, red, and blue lines, respectively.
+The right figure shows the signal spectrum, subtracting the events identified as $K^0$ or $\Sigma^{\pm}_{forward}$ from all events.
+
+To separate these events,
+we generated template events using a Geant4 Monte Carlo simulation and decomposed the reactions by fitting their spectra with templates.
+This decomposition was applied not only to the signal but also to the background reactions.
+The procedures used in this decomposition are described in detail in Section \ref{sec:template_fitting}
+The estimation of the detector resolution used in this simulation is described in detail in Appendix \ref{chapter:detector_resolution}.
+

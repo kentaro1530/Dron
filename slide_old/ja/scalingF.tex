@@ -1,0 +1,27 @@
+\begin{frame}{スケーリングファクター}
+  \label{page:scalingF}
+  
+  
+  \input{table/scalingF_ja}
+
+  \centering
+  ルミのシティーの $N_{target}$は川崎くんにより改定された値\\
+  run133までは$0.1613[g/cm^3]$、run134からは$0.1617[g/cm^3]$を使う。\\
+  $N_{beam}$, $Eff_{trig}$, $E_{DAQ}$はラン毎に見積もって足し上げる。\\
+
+  { \small
+    \begin{table}
+      NC検出効率
+      \begin{tabular}{|c|c|c|c|}
+        \hline
+        & 値　& エラー & 備考 \\
+        \hline
+        NC本体 & 0.317 & 0.016 & { \scriptsize 水素標的データの$K^-d\rightarrow K^0 n$反応で測定 } \\
+        $Overkill_{CVC \Cup BVC}$ & 0.081 & 0.007 & { \scriptsize Run78のデータにより見積もる } \\
+        \hline
+        NC検出効率 & 0.291 & 0.16 & エラーは二乗和 \\
+        \hline
+      \end{tabular}
+    \end{table}
+  }
+\end{frame}

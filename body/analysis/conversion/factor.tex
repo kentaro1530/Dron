@@ -1,0 +1,100 @@
+\input{analysis/conversion/table/KN_scaling}
+\input{analysis/conversion/table/KP_scaling}
+
+\input{analysis/conversion/figs/PCCVC_SA_elem}
+\input{analysis/conversion/figs/PCCVC_SA}
+
+The factors for converting to double-differential cross sections are explained here.
+These can be categorized into the following three components:
+\begin{enumerate}
+\item Luminosity, which is determined by the number of incident beam particles and the number of target nuclei;
+\item The solid angle and detection efficiency of the forward-scattered neutrons (or protons) produced in the reaction;
+\item The detection efficiency of detectors.
+\end{enumerate}
+
+These are summarized in Tables \ref{table:KN_scaling} and \ref{table:KP_scaling} for the forward neutron and forward proton cases, respectively.
+
+Luminosity is a quantity that represents the product of the number of incident beam particles and the number of target particles.
+The beam intensity is evaluated by multiplying the beam scaler counts by the DAQ live ratio,
+described in Section \ref{sec:DAQ_eff}, which accounts for the fraction of data actually recorded for analysis;
+the trigger efficiency, described in Section \ref{sec:trig_eff}, which accounts for whether a trigger signal was actually generated;
+and the fraction of $K^-$ beam triggers that passed through the fiducial volume of the target, as described in Section \ref{sec:beam_ana}.
+This beam-related quantity is calculated and summed on a run-by-run basis.
+Tables \ref{table:KN_scaling} and \ref{table:KP_scaling} show representative values
+consisting of the average over all runs and the errors evaluated from the fluctuations.
+For the number of target particles, the density of the liquid deuterium target is estimated from the monitored temperatures,
+as described in Section \ref{sec:target} The uncertainty is evaluated based on fluctuations during the production run and
+is calculated by multiplying the density by the length of the fiducial volume.
+
+% The temperature of the liquid deuterium target is monitored, as described in Section \ref{sec:target},
+% and this value is used to evaluate its density.
+
+In the case of forward neutrons, since they travel in straight trajectories,
+the solid angle can be defined by the area covered by the NC. When the solid angle is evaluated at the center of the NC
+and the variation is assessed by shifting the evaluation point front and back, it is determined to be 21.5 $\pm$ 0.2 [msr]\%.
+The detection efficiency of the neutron detector can be divided into two components
+the intrinsic detection efficiency of the NC for neutrons and the over-veto effect by the CVC.
+The intrinsic neutron detection efficiency is evaluated to be 31.7 $\pm$ 1.6 [\%] using the reaction
+$K^- p \rightarrow K^0 n \rightarrow \pi^+ \pi^- n$ with a liquid hydrogen target, as described in Section \ref{sec:NC_eff}.
+The over-veto effect in the CVC, which is also considered to be strongly influenced by beam-induced background,
+is evaluated to be 8.1 $\pm$ 0.7 [\%] using the production run data, also described in Section \ref{sec:NC_overveto}.
+
+In the case of forward protons, since they are bent by the Usniwaka magnet,
+the solid angle coverage depends on the momentum of the forward-scattered proton, i.e., the mass of the $\pi^-\Sigma^0$ system.
+To estimate this, we use a dataset similar to the Monte Carlo simulation used for the acceptance correction.
+The solid angle for a given $\pi^-\Sigma^0$ mass region is evaluated by dividing the angular space into small solid angle elements.
+For each element,
+the detection efficiency of the forward detector system (CVC/PC) is evaluated based on whether the proton can actually be detected.
+The effective solid angle for each element is then calculated by multiplying the element's solid angle by its detection efficiency,
+as shown in Figure \ref{fig:PCCVC_SA_elem}
+Finally, the total solid angle is obtained by summing these effective solid angles over all elements, as shown in Figure \ref{fig:PCCVC_SA}.
+The solid angle does not change significantly in the region of interest.
+
+In this data set, hadronic reactions and similar processes that could cause secondary interactions are turned off
+to avoid double-counting losses already accounted for in the detection efficiency of forward protons evaluated in Section \ref{sec:PC_eff}.
+Here, the detection efficiency of protons was estimated to be 81.9 $\pm$ 4.2 [\%] using the $K^- d \rightarrow \pi^- \pi^- p p$ reaction.
+Also,
+the detection efficiency of FDC1 was evaluated to be 98.7 $\pm$ 0.5 [\%] using the BVC as the trigger detector under the pion beam conditions,
+as described in Section \ref{sec:FDC1_eff}.
+
+After applying the CDS acceptance obtained in the previous subsection and the correction factors described here,
+we obtain the $d(K^-, n)\pi^{\mp}\Sigma^{\pm}$ and $d(K^-, p)\pi^-\Sigma^0$ cross sections,
+as shown in Figures \ref{fig:Charge_CS} and \ref{fig:pimS0_CS}, respectively.
+
+% \input{discussion/conversion/figs/K0_CS}
+\input{analysis/conversion/figs/Charge_CS}
+\input{analysis/conversion/figs/pimS0_CS}
+
+
+
+
+
+
+
+
+
+%% The solid angle for a given $\pi^-\Sigma^0$ mass region is evaluated by summing the effective solid angles,
+%% each weighted by the detection efficiency of the forward detector system (CVC/PC), over the solid angle bins of the generated protons.
+
+%% In this data set, hadron reactions and other reactions are turned off to prevent double-counting of losses due to reactions included in the detection efficiency of forward protons evaluated in Section 2.3.
+
+
+%% The obtained spectra are converted to cross sections.
+%% For this purpose, the target, beam, and DAQ efficiencies are summarized as luminosity.
+%% The target and beam quantities are discussed in Sections.\ref{sec:target} and \ref{sec:Kbeam}, respectively.
+%% The DAQ efficiency consists of two parts, one of which is the DAQ live rate and the other is the trigger efficiency, described in Sections.\ref{sec:DAQ_live_rate} and \ref{sec:trigger}.
+%% Detector efficiency is also evaluated and corrected for conversion to cross sections.
+%% The CDC, NC, and PC efficiencies are described in Sections.\ref{sec:CDC}, \ref{sec:NC}, and \ref{sec:PC}, respectively. 
+%% These conversion factors are common for the $\pi \Sigma$ spectra.
+%% These factors are summarized in Table.\ref{table:KN_scaling} and Table.\ref{table:KP_scaling} about $d(K^-, n)$ and $d(K^-, p)$, respectively.
+
+%% On the other hand, the acceptances depend on the $\pi \Sigma$ mass spectra.
+%% % In the case of $d(K^-, n)"\pi^{\mp} \Sigma^{\pm}"$, the separation ratio of $\pi^- \Sigma^+$ and $\pi^+ \Sigma^-$ is also depend on.
+%% We obtain the cross section of $d(K^-, n)"n K^0"$, $d(K-, n)"\pi^-\Sigma^0"$ and $d(K^-, p)"\pi^- \Sigma^0"$ by adapting the these corrections,
+%% which are shown in Figure.\ref{fig:nK0_CS}, Figure.\ref{fig:Charge_CS}, and Figure.\ref{fig:pimS0_CS}, respectively.
+%% We obtain the cross section of $d(K-, n)"\pi^-\Sigma^0"$ and $d(K^-, p)"\pi^- \Sigma^0"$ by adapting the these corrections,
+%% which are shown in Fig.\ref{fig:Charge_CS}, and Fig.\ref{fig:pimS0_CS}, respectively.
+
+% \input{discussion/conversion/figs/spectra}
+
+% We discuss the physical mean about obtained spectra.

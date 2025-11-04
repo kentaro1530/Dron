@@ -1,0 +1,22 @@
+\begin{frame}{Kentaro's analysis library @ ag}
+  \footnotesize
+  \begin{itemize}
+  \item Directory : /w/e15/inoue/knpipi\_ev/
+  \item Sample : macro/readKNpipi\_ev.C\\
+    \hspace{1.45cm} macro/dumpScale.C
+  \item Classes : src/XXXInfo.h
+  \item \sout{ Data :  root/readAna.root }
+  \item MC Data
+    \begin{itemize}
+    \item $K^- d \rightarrow n_{forward} \pi^{\mp}\Sigma^{\pm}$ $m_{\pi^{\pm}\Sigma^{\mp}}$ : $N\bar{K} \sim 1.8 [GeV/c^2]$ flat $\theta_{n_{forward}} \sim 8^{\circ}$
+      root/sim/kd\_nL1405\_pimSp:kd\_nL1405\_pipSm/readAna.root
+    \item $K^- d \rightarrow n_{spec} \pi^{\mp}\Sigma^{\pm}$ (1-step) : \\
+      root/sim/kd\_pimSp\_ns:kd\_pipSm\_ns/readAna.root
+    \item $K^- d \rightarrow n_{forward} K^0 n_{spec}$ (1-step) : root/sim/kd\_k0n\_ns/readAna.root
+    \item $K^- d \rightarrow n_{forward} K^0 n$ (2-step) : root/sim/kd\_k0n\_2step/readAna.root
+    \item $K^- d \rightarrow n \Lambda(1520) $ (isotropic) : root/sim/kd\_nL1520\_iso/readAna.root
+    \end{itemize}
+  \item Library : macro/lib/scale.C (ROOT Macro)\\
+    \hspace{1.3cm} ../k18ana/lib/libAll.so (Shared Library)
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,57 @@
+\begin{frame}{Pole Parameters (いろいろなフィット) 上限/下限値}
+  \small
+  \begin{tabular}{cccc}
+    \begin{minipage}{0.1\hsize}
+      Pole
+      \vspace{1.5cm}\\
+      Width\\
+    \end{minipage}
+    \begin{minipage}{0.3\hsize}
+      \centering
+      Threshold : $K^0 n$ \\
+      \includegraphics[width=3cm]{../pic/Dron/fit_pole_gaus_KzeroN.eps}\\
+      \includegraphics[width=3cm]{../pic/Dron/fit_width_gaus_KzeroN.eps}\\
+    \end{minipage}
+    \begin{minipage}{0.3\hsize}
+      \centering
+      Threshold : $\bar{K} N$ \\
+      \includegraphics[width=3cm]{../pic/Dron/fit_pole_gaus_KN.eps}\\
+      \includegraphics[width=3cm]{../pic/Dron/fit_width_gaus_KN.eps}\\
+    \end{minipage}
+    \begin{minipage}{0.3\hsize}
+      \centering
+      Threshold : $K^- p$ \\
+      \includegraphics[width=3cm]{../pic/Dron/fit_pole_gaus_Kmp.eps}\\
+      \includegraphics[width=3cm]{../pic/Dron/fit_width_gaus_Kmp.eps}\\
+    \end{minipage}
+  \end{tabular}
+  \centering
+  
+  {
+   \scriptsize
+   \textcolor{green}{Green} : Best Fit
+  }
+
+  { \footnotesize
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+      \hline
+      \multicolumn{2}{|c|}{} & \multicolumn{2}{c|}{$K^0 n$} & \multicolumn{2}{c|}{$\bar{K}N$} & \multicolumn{2}{c|}{$K^- p$} \\
+      \multicolumn{2}{|c|}{} & Upper & Lower & Upper & Lower & Upper & Lower \\
+      \hline 
+      \multirow{3}{*}{$M_{\pi \Sigma}$ \newline [GeV]} &
+      Gaussian     & \textcolor{red}{1428.2} & 1412.9  & 1427.3 & 1411.4  & 1427.0 & \textcolor{red}{1410.0} \\
+      & 2-Gaussian & 1427.4 & 1416.4  & 1426.3 & 1414.9  & 1425.8 & 1413.7 \\
+      & Mean/RMS   & \underline{1433.5} & 1409.3  & 1432.1 & 1408.3  & 1431.6 & \underline{1407.1} \\
+      \hline
+      \multirow{3}{*}{$\Gamma$ \newline [GeV]} &
+      Gaussian     & \textcolor{red}{-17.9} & -31.5 & -19.2 & -31.7 & -21.4 & \textcolor{red}{-35.8} \\
+      & 2-Gaussian & \textcolor{blue}{-15.3} & -28.0 & -17.3 & -29.6 & -19.2 & -31.7 \\
+      & Mean/RMS   & \underline{-14.9} & -41.1 & -16.8 & -42.1 & -18.9 & \underline{-43.6} \\
+      \hline
+    \end{tabular}    
+  }
+  \centering
+  \scriptsize
+  色付き/下線付き文字は系統誤差として評価する際に使う数字  
+\end{frame}
+

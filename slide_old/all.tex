@@ -1,0 +1,48 @@
+\documentclass[dvipdfmx]{beamer}
+\input
+\usetheme{Madrid}
+
+\title{Current Status}
+\author{Kentaro Inoue}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\input{items}
+\input{scalingF}
+
+\begin{frame}
+  \label{page:Trig}
+  { \Huge Trigger and DAQ eff.}
+\end{frame}
+\input{trigger}
+
+\begin{frame}
+  \label{page:BL}
+  { \Huge Beam Line Analysis \newline (Number of Kaon)}
+\end{frame}
+\input{beam_line}
+
+\begin{frame}
+  \label{page:CDS}
+  { \Huge CDS Analysis }
+\end{frame}
+\input{CDS}
+
+\begin{frame}
+  \label{page:NC}
+  { \Huge NC Analysis }
+\end{frame}
+\input{NC}
+
+\input{KN_ana_default}
+
+%% \input{KN_K0nn}
+
+\input{brank}
+
+\input{calib/NC_dE}
+\input{calib/NC_dE_diff}
+
+\end{document}

@@ -1,0 +1,6 @@
+As mentioned earlier, Λ(1405) is closely related to the KN interaction.
+One way to measure the KN interaction on the KN threshold is to measure X-rays from Kaonic hydrogen.
+In this method, the KN interaction is determined by measuring the shift of the X-ray emitted from the Kaonic hydrogen from the electromagnetic interaction.
+The results of this measurement were previously thought to be repulsive, but the E228 experiment performed at KEK-PS by Iwasaki et al. concluded that the interaction is attractive.
+Subsequently, the SIDDHARTA collaboration conducted further experiments with higher precision.
+

@@ -1,0 +1,10 @@
+The Λ(1405) is a hyperon resonance state with strangeness S = −1, isospin I = 0 spin-parity J P = 1/
+This resonance state was ﬁrst predicted by Dalitz and Tuan [1] in 1959.
+They analyzed the K̄N scattering data and found that the I = 0 K̄N scattering amplitude has a resonance pole below the K̄N mass threshold.
+They suggested that this resonance pole is a bound state of K̄N [3].
+Later, Λ(1405) was ﬁrst reported in a hydrogen bubble chamber experiment at the Lawrence Radiation Laboratory: the K − p → Σπππ reaction with a K − beam of 1.
+A high-statistics generation experiment of Λ(1405) was performed at CERN [4].
+In this experiment, K − p → Σ+ (1660)π − → Λ(1405)π + π − reaction was measured using a 4.2GeV/c
+Dalitz and Deloﬀ deduced mass M = 1406.5 ± 4.0 MeV/c2 and width Γ = 50 ±2.0 MeV/c2 of Λ(1405) from ﬁtting of this d
+
+The latest Particle Data Group has two works similar to these to give the mass of Λ(1405) as M = 1405 MeV/c and Γ = 50 MeV.

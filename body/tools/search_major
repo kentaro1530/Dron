@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+const{ execSync } = require('child_process');
+
+const logLines=execSync('git log').toString().split('\n');
+const indices=logLines.map((a, i)=> a.includes('ag version') ? i : -1).filter(a=> a>=0);
+
+console.log("===============================================================");
+indices.map(a=> logLines.slice(a-3, a+2)).forEach(a=>{
+    console.log(a.join('\n'));
+    console.log("===============================================================");
+});
+
+// console.log(commits);

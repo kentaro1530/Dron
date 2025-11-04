@@ -1,0 +1,62 @@
+\input{discussion/spectra/figs/fit_A_scale}
+\input{discussion/spectra/figs/fit_B_scale}
+The method described in the previous section focused solely on the $I=0$ component,
+leaving $I=1$ and the interplay between $I=0$ and $I=1$ in the obtained spectra unexplored.
+To address this limitation, we will utilize spectra derived from the DCC model to examine these contributions.
+First, we fit the experimental spectra we obtained by introducing the parameters $S_{I=0}$ and $S_{I=1}$,
+which adjust the strengths of $I=0$ and $I=1$ components independently.
+Two versions of the DCC model, Model A and Model B, are considered.
+Figures \ref{fig:fit_A_scale} and \ref{fig:fit_B_scale} correspond to cases using Model A and Model B, respectively.
+For the fitting performed with Model A, the parameter for $I=0$ was reduced to $S_{I=0}=\fitAscaleIz$,
+while the parameter fot $I=1$ remained nearly unchanged at $S_{I=1}=\fitAscaleIo$.
+With Model B, the parameter for $I=0$ was reduced to $S_{I=0}=\fitBscaleIz$,
+whereas the parameter for $I=1$ was increased to $S_{I=1}=\fitBscaleIo$.
+Considering each figure, the $I=1$ spectrum appears to be in good agreement with both Models A and B.
+On the other hand, the spectra for the interference term and $I=0$ seem to align reasonably well with Model B, but not with Model A.
+In Model A, the fit for the interference term appears to lack intensity above the threshold, and the overall spectrum does not seem to match $I=0$.
+In fact, the fitting with Model B yicelds $\chi^2/NDF=\fitBscaleChi=\fitBscaleChiNum$,
+whereas the fitting with Model A is significantly worse, with $\chi^2/NDF=\fitAscaleChi=\fitAscaleChiNum$.
+Table \ref{table:DCC_poles} lists the pole parameters of $\Lambda(1405)$ derived from the DCC model,
+where Pole1, the higher of the two poles, significantly affects the observed spectrum.
+In model A, the imaginary part, or width, of that parameter is large,
+resulting in a pronounced tail of the $I=0$ spectrum below the $\bar{K}N$ threshold,
+thus preventing accurate reproduction of the observed spectrum.
+
+\input{discussion/spectra/table/DCC_poles}
+
+\input{discussion/spectra/figs/fit_B_phase_fixI1}
+
+In more detail, the fitting in model B reveals that both the $I=0$ and $I=1$ spectra seem to
+lack intensity compared to the theoretical spectrum above the $\bar{K}N$ threshold, while the interference term spectrum shows a better fit.
+This means that the $I=0$ spectrum is determined below the $\bar{K}N$ threshold,
+while above the $\bar{K}N$ threshold, it is limited by the interference between $I=0$ and $I=1$.
+In general, the scattering amplitude is complex, and there is flexibility to adjust its phase,
+i.e., to introduce a parameter representing the phase difference between $I=0$ and $I=1$.
+If the phase difference is denoted by $\theta_{I=0,1}$, the relationship between the scale parameter,
+which modifies the magnitude of the interference term,
+and $S_{int}=\cos\theta_{I=0,1}$ can be derived from the third term in Eq.\ref{eq:Charge_piS}.
+
+We fit the observed spectrum with DCC's Model B by introducing a free parameter that adjusts this interference term independently.
+The $I=1$ spectrum is determined only from the $\pi^-\Sigma^0$ spectrum, whereas the 
+$I=0$ spectrum is derived from all three $\pi\Sigma$ spectra.
+The interference term is determined from the $\pi^-\Sigma^+$ and $\pi^-\Sigma^-$ spectra.
+Therefore, we first fit only the $I=1$ spectrum, fixed $S_{I=1}$ at that value,
+and then performed a fit to determine both $S_{I=0}$ and $S_{int}$, as shown in Figure \ref{fig:fit_B_phase_fixI1}.
+The $\chi^2/NDF=\fitBBChi=\fitBBChiNum$ of this fit is, which was improved by introducing a phase parameter.
+In this fit, the $I=0$ scale parameter $A_{I=0}$ decreases from $\fitBscaleIz$ to $\fitBBIz$,
+while the $I=1$ parameter $A_{I=1}$ increases from $\fitBscaleIo$ to $\fitBBIo$.
+The interference term $A_{int}$ is estimated as $\fitBBphase$ and weakened.
+This value corresponds to a phase difference of $\delta\theta_{I=0,1}=\fitBBDegree$[degree] between the $I=0$ and $I=1$ interference terms.
+This is considered to be due to the increase in $I=1$, which is primarily structured above the $\bar{K}N$ threshold,
+being balanced by the intensity above the $\bar{K}N$ threshold for $I=0$.
+
+\input{discussion/spectra/figs/fit_B_phase}
+
+Finally, there is room to further improve the fit by simultaneously fitting all parameters.
+The result is shown in Figure \ref{fig:fit_B_phase}, where $\chi^2/NDF = \fitBChi=\fitBChiNum$, and no significant improvement is observed.
+This suggests that $A_{I=1}$ is determined from a single spectrum.
+Compared to the case where $A_{I=1}$ was determined first,
+the parameters in this case show that $A_{I=0}$ decreased from $\fitBBIz$ to $\fitBIz$,
+$A_{I=1}$ increased from $\fitBBIo$ to $\fitBIo$, and $A_{int}$ decreased slightly from $\fitBBphase$ to $\fitBphase$,
+in the same direction as the introduction of $A_{int}$.
+This value of $A_{int}$ corresponds to a phase $\theta=\fitBphase$ shift.

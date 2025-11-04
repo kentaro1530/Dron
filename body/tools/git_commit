@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+bash tools/clean_log
+
+git add .
+echo "Check ag version"
+git log | grep 'ag version'
+
+git commit -a

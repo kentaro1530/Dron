@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+bash tools/clean_log
+
+bash tools/compile main_full
+bash tools/compile main_intro
+bash tools/compile main_experimental
+bash tools/compile main_analysis
+bash tools/compile main_discussion
+
+dir=`date '+%Y%m%d'`
+
+echo $dir
+mkdir $dir
+cp main_full.pdf $dir
+cp main_intro.pdf $dir
+cp main_experimental.pdf $dir
+cp main_analysis.pdf $dir
+cp main_discussion.pdf $dir
+
+password="ag_rs@_kentaro_p@ss"
+
+expect -c "
+set timeout 10
+spawn rsync -avz main_full.pdf main_intro.pdf main_experimental.pdf main_analysis.pdf main_discussion.pdf main_appendix.tex ag:/www/J-PARC/inoue/Dron/
+expect \"passphrase\"
+send   \"$password\n\"
+expect \"$\"
+exit 0
+"
+
+expect -c "
+set timeout 10
+spawn rsync -arv --progress $dir ag:/www/J-PARC/inoue/Dron/
+expect \"passphrase\"
+send   \"$password\n\"
+expect \"$\"
+exit 0
+"
+
