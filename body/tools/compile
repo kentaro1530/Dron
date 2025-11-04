@@ -6,7 +6,6 @@ if [ $# -gt 0 ]; then
     input=$1
 fi
 
-
 texfile=$input".tex"
 dvifile=$input".dvi"
 outfile=$input".pdf"
