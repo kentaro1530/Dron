@@ -36,9 +36,26 @@ The interference terms are scaled by $\sqrt{S_{I=0}S_{I=1}}$, as described in Eq
 
 By fitting with these parameters, we obtain $S_{I=0} = \fitAscaleIz$ and $S_{I=1} = \fitAscaleIo$ for Model A,
 and $S_{I=0} = \fitBscaleIz$ and $S_{I=1} = \fitBscaleIo$ for Model B.
-The results of these fits are shown in the figure \ref{fig:fit_scale} : the left panel corresponds to Model A, and the right panel to Model B.
+The results of these fits are shown in the Fig.\ref{fig:fit_scale} : the left panel corresponds to Model A, and the right panel to Model B.
 The top subpanels show the spectra for the $I=0$ component, the middle ones for the $I=1$ component (i.e., the $\pi^-\Sigma^0$ spectrum),
 and the bottom ones for the interference term.
+
+In Model B (right panel), a reasonably good agreement is observed across all spectra.
+In contrast, Model A (left panel) reproduces the central $I=1$ term well, but the upper $I=0$ and lower interference terms
+appear to be underestimated in the fit results in the quasi-elastic scattering region.
+Indeed, the $\chi^2/NDF$ values are $\fitBscaleChi = \fitBscaleChiNum$ for Model B and
+$\fitAscaleChi = \fitAscaleChiNum$ for Model A, indicating a significantly better fit for Model B.
+This discrepancy is considered to arise from the fact that the theoretical spectrum for $I=0$ possesses a long-tailed component in the bound region.
+Table \ref{table:DCC_poles} summarizes the parameters of the $I=0$ pole used in the theoretical calculations for the fit.
+This is attributed to the large imaginary part of pole 1,
+which is strongly coupled to the $\bar{K}N$ channel and therefore has a pronounced effect in this experiment.
+
+As shown in Eq.(\ref{eq:interfer}), the phase difference between $I=0$ and $I=1$ modifies the interference term.
+We demonstrate that introducing this phase difference as a fitting parameter leads to an improved fit.
+The following discussion focuses exclusively on Model B, which provided the better overall agreement.
+Since the $I=1$ component is determined solely from the experimental spectrum, two fitting strategies can be considered
+(i) first fixing the $I=1$ contribution by $\pi^- \Sigma^0$ spectrum, or (ii) fitting all spectra simultaneously.
+The results obtained from these two approaches are presented in Fig. \ref{fig:fit_B_phase_fixI1} and \ref{fig:fit_B_phase}.
 
 
 
